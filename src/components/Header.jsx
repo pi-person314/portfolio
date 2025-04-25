@@ -11,6 +11,7 @@ export default function Header() {
                 <Link className="text-xl font-serif hover:text-blue-300" to="/about">About</Link>
                 <Link className="text-xl font-serif hover:text-blue-300" to="/projects">Projects</Link>
                 <Link className="text-xl font-serif hover:text-blue-300" to="/contact">Contact</Link>
+                <Link className="text-xl font-serif hover:text-blue-300" to="/contact">Gallery</Link>
             </nav>
         </header>
     );
