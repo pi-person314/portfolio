@@ -4,7 +4,6 @@ import Home from "./screens/Home";
 import About from "./screens/About";
 import Projects from "./screens/Projects";
 import Contact from "./screens/Contact"
-import Gallery from "./screens/Gallery"
 
 export default function App() {
   return (
@@ -16,7 +15,6 @@ export default function App() {
           <Route path="/about" element={<About />}/>
           <Route path="/projects" element={<Projects />}/>
           <Route path="/contact" element={<Contact />}/>
-          <Route path="/gallery" element={<Gallery />}/>
         </Routes>
       </Router>
     </div>

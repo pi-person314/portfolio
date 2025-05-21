@@ -6,12 +6,11 @@ export default function Header() {
         <header className="bg-green-900 text-white p-2">
             <nav className="flex justify-center items-center mx-auto space-x-10">
                 <Link to="/">
-                    <img src={pi} className="h-20 w-auto" alt="Pi Logo"/>
+                    <img src={pi} className="h-20 w-auto hover:animate-spin" alt="Pi Logo"/>
                 </Link>
                 <Link className="text-xl font-serif hover:text-blue-300" to="/about">About</Link>
                 <Link className="text-xl font-serif hover:text-blue-300" to="/projects">Projects</Link>
                 <Link className="text-xl font-serif hover:text-blue-300" to="/contact">Contact</Link>
-                <Link className="text-xl font-serif hover:text-blue-300" to="/contact">Gallery</Link>
             </nav>
         </header>
     );
