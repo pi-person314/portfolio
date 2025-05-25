@@ -7,7 +7,7 @@ export default function Home() {
                 <h1 className="text-8xl text-center m-10 font-serif drop-shadow-2xl">Welcome, I'm<br/><strong>Jaden</strong></h1>
                 <p className="text-xl text-center">Also known as Pi Person, I'm an incoming college freshman majoring in <strong>computer science</strong> and <strong>math</strong>!<br/>Check out the rest of my website to learn more...</p>
             </div>
-            <img className="w-1/3 rounded-3xl shadow-lg" src={me} alt="Me"/>
+            <img className="w-1/3 rounded-3xl shadow-lg hover:scale-110 duration-300 ease-in-out" src={me} alt="Me"/>
         </div>
     );
 };
