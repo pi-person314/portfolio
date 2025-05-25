@@ -13,8 +13,8 @@ export default function Contact() {
                     <p className="text-xl">Phone: <a className="hover:text-blue-600" href="tel:443-251-6876"><u>(443) 251-6876</u></a></p>
                     <p className="text-xl">Email: <a className="hover:text-blue-600" href="mailto:jmli314@berkeley.edu"><u>jmli314@berkeley.edu</u></a></p>
                     <div className="flex items-center justify-center gap-10">
-                        <a className="hover:text-blue-600" href="https://www.linkedin.com/in/jaden-li-23a873314/"><img src={linkedin} alt="LinkedIn"/></a>
-                        <a className="hover:text-blue-600" href="https://github.com/pi-person314"><img src={github} alt="GitHub"/></a>
+                        <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://www.linkedin.com/in/jaden-li-23a873314/"><img src={linkedin} alt="LinkedIn"/></a>
+                        <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://github.com/pi-person314"><img src={github} alt="GitHub"/></a>
                     </div>
                 </div>
                 <div className="flex-col w-3/4 md:w-1/2 p-10">

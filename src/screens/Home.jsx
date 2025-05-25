@@ -8,7 +8,7 @@ export default function Home() {
                 <h1 className="text-8xl text-center font-serif drop-shadow-2xl">Welcome, I'm<br/><strong>Jaden</strong></h1>
                 <p className="text-xl text-center">Also known as Pi Person, I'm an incoming college freshman majoring in<br/><strong>computer science</strong> and <strong>math</strong>!<br/>Check out the rest of my website to learn more...</p>
             </div>
-            <img className="h-1/4 md:h-auto md:w-1/3 m-10 rounded-3xl shadow-lg hover:skew-y-6 focus:rotate-180 duration-300 ease-in-out" tabIndex={0} src={me} alt="Me"/>
+            <img className="h-1/4 md:h-auto md:w-1/3 m-10 rounded-3xl shadow-lg transition hover:skew-y-3 focus:rotate-180 duration-300 ease-in-out" tabIndex={0} src={me} alt="Me"/>
         </div>
     );
 };
