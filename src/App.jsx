@@ -10,12 +10,14 @@ export default function App() {
     <div className="flex flex-col h-screen">
       <Router>
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About />}/>
-          <Route path="/projects" element={<Projects />}/>
-          <Route path="/contact" element={<Contact />}/>
-        </Routes>
+        <div className="flex-1 overflow-hidden">
+          <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/about" element={<About />}/>
+            <Route path="/projects" element={<Projects />}/>
+            <Route path="/contact" element={<Contact />}/>
+          </Routes>
+        </div>
       </Router>
     </div>
   );

@@ -7,8 +7,8 @@ const images = import.meta.glob('../assets/travel/*.{jpg,png}', { eager: true })
 export default function Contact() {
     return (
         <>
-            <div className="flex-1 flex flex-col md:flex-row bg-green-300 justify-evenly items-center">
-                <div className="flex-col space-y-5 text-center p-10">
+            <div className="flex-1 flex flex-col md:flex-row h-full bg-green-300 justify-evenly items-center">
+                <div className="space-y-5 text-center p-10">
                     <h1 className="font-serif font-bold text-6xl">Contact Me</h1>
                     <p className="text-xl">Phone: <a className="hover:text-blue-600" href="tel:443-251-6876"><u>(443) 251-6876</u></a></p>
                     <p className="text-xl">Email: <a className="hover:text-blue-600" href="mailto:jmli314@berkeley.edu"><u>jmli314@berkeley.edu</u></a></p>
@@ -17,7 +17,7 @@ export default function Contact() {
                         <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://github.com/pi-person314"><img src={github} alt="GitHub"/></a>
                     </div>
                 </div>
-                <div className="flex-col w-3/4 md:w-1/2 p-10">
+                <div className="w-3/4 md:w-1/2 p-10">
                     <div className="grid grid-cols-3 overflow-y-auto max-h-[40rem]">
                         {Object.entries(images).map(([path, module], index) => (
                             <img key={index} src={module.default} alt={`Image ${index}`} className="shadow-lg aspect-square object-cover"/>
