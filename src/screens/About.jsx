@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 export default function About() {
     return (
         <>
-            <div className="flex justify-between bg-green-300 h-full">
-                <div className="flex flex-col justify-between m-10 w-2/5">
+            <div className="flex flex-col md:flex-row justify-between bg-green-300 h-full overflow-y-auto">
+                <div className="flex flex-col justify-between m-10 md:w-2/5">
                     <div>
                         <h1 className="text-3xl lg:text-5xl mb-5"><b>Profile</b></h1>
                         <p className="text-md lg:text-lg">Highly motivated and hardworking college student planning to pursue a career in <b>software engineering</b>.
@@ -45,21 +45,21 @@ export default function About() {
                         </ul>
                     </div>
                 </div>
-                <div className="flex flex-col items-center m-10 w-1/2">
+                <div className="flex flex-col items-center m-10 md:w-1/2">
                     <h1 className="text-xl lg:text-3xl mb-5"><b>Hobbies</b></h1>
-                    <div className="overflow-y-auto space-y-5">
-                        <div className="flex bg-green-400 shadow-xl rounded-xl p-5 w-full h-1/5">
-                            <div className="mr-10 overflow-y-auto">
+                    <div className="md:overflow-y-auto space-y-5">
+                        <div className="flex flex-col md:flex-row bg-green-400 shadow-xl rounded-xl p-5 w-full h-1/5">
+                            <div className="mb-5 md:mb-0 md:mr-10 md:overflow-y-auto">
                                 <h2 className="text-lg lg:text-xl"><b>Competitive Programming / Math</b></h2>
                                 <p className="text-md lg:text-lg">Competed in various regional and national programming competitions: UMD, Virginia Tech, M(IT)^2, CALICO, etc.
                                     Took the AMC 10/12 and AIME throughout high school and was captain of the Math Team.
                                     Continue to participate in weekly Codeforces and LeetCode contests.
                                 </p>
                             </div>
-                            <img className="w-1/3 object-contain" src={comp}/>
+                            <img className="md:w-1/3 object-contain" src={comp}/>
                         </div>
-                        <div className="flex space-x-3 bg-green-400 shadow-xl rounded-xl p-5 w-full h-1/5">
-                            <div className="mr-10 overflow-y-auto">
+                        <div className="flex flex-col md:flex-row bg-green-400 shadow-xl rounded-xl p-5 w-full h-1/5">
+                            <div className="mb-5 md:mb-0 md:mr-10 md:overflow-y-auto">
                                 <h2 className="text-lg lg:text-xl"><b>Piano / Cello</b></h2>
                                 <p className="text-md lg:text-lg">Started private lessons at the ages of 6 and 8. 
                                     Learned and fell in love with classical repertoire by Beethoven, Chopin, Tchaikovsky, etc.
@@ -67,36 +67,36 @@ export default function About() {
                                     Performed in various chamber groups (piano trio, cello quartet) with friends.
                                 </p>
                             </div>
-                            <img className="w-1/3 object-contain" src={cello}/>
+                            <img className="scale-75 md:scale-100 md:w-1/3 object-contain" src={cello}/>
                         </div>
-                        <div className="flex space-x-3 bg-green-400 shadow-xl rounded-xl p-5 w-full h-1/5">
-                            <div className="mr-10 overflow-y-auto">
+                        <div className="flex flex-col md:flex-row bg-green-400 shadow-xl rounded-xl p-5 w-full h-1/5">
+                            <div className="mb-5 md:mb-0 md:mr-10 md:overflow-y-auto">
                                 <h2 className="text-lg lg:text-xl"><b>Tennis</b></h2>
                                 <p className="text-md lg:text-lg">Settled on tennis after trying soccer, basketball, and baseball.
                                     Quickly improved with lots of practice and made it on the high school varsity team.
                                     Continue to play with friends (doubles whenever possible!) and watch tournaments on TV.
                                 </p>
                             </div>
-                            <img className="w-1/3 object-contain" src={tennis}/>
+                            <img className="md:w-1/3 object-contain" src={tennis}/>
                         </div>
-                        <div className="flex space-x-3 bg-green-400 shadow-xl rounded-xl p-5 w-full h-1/5">
-                            <div className="mr-10 overflow-y-auto">
+                        <div className="flex flex-col md:flex-row bg-green-400 shadow-xl rounded-xl p-5 w-full h-1/5">
+                            <div className="mb-5 md:mb-0 md:mr-10 md:overflow-y-auto">
                                 <h2 className="text-lg lg:text-xl"><b>Travel</b></h2>
                                 <p className="text-md lg:text-lg">Went on tons of cool trips with parents over school breaks.
                                     Took lots of pictures (check out my <Link className="hover:text-blue-600" to="/contact"><u>contact page</u></Link>)!
                                     Places visited: China, Alaska, Hawaii, Mexico, Costa Rica, UK, France, Spain, Italy, Greece, Turkey, etc.
                                 </p>
                             </div>
-                            <img className="w-1/3 object-contain" src={travel}/>
+                            <img className="md:w-1/3 object-contain" src={travel}/>
                         </div>
-                        <div className="flex space-x-3 bg-green-400 shadow-xl rounded-xl p-5 w-full h-1/5">
-                            <div className="mr-10 overflow-y-auto">
+                        <div className="flex flex-col md:flex-row bg-green-400 shadow-xl rounded-xl p-5 w-full h-1/5">
+                            <div className="mb-5 md:mb-0 md:mr-10 md:overflow-y-auto">
                                 <h2 className="text-lg lg:text-xl"><b>Pi</b></h2>
                                 <p className="text-md lg:text-lg">Started when I memorized 100 digits for a pi memorization contest in elementary school.
                                     Has grown into a passion for the number pi, as can be seen from my nickname (Pi Person), this website's logo, and my unwavering belief that pi is the best number out there.
                                 </p>
                             </div>
-                            <img className="w-1/3 object-contain" src={pi}/>
+                            <img className="md:w-1/3 object-contain" src={pi}/>
                         </div>
                     </div>
                 </div>
