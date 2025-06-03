@@ -20,7 +20,7 @@ export default function About({darkMode}) {
                     </div>
                     <div className="md:h-1/6 lg:h-1/4"> 
                         <h1 className="text-2xl lg:text-3xl mb-5 justify-self-center md:justify-self-auto"><b>Experience</b></h1>
-                        <div className="md:h-full md:overflow-y-scroll">
+                        <div className="md:h-full md:overflow-y-auto">
                             <h2 className="text-lg lg:text-xl"><b>JHU Applied Physics Lab ASPIRE Intern</b></h2>
                             <h3 className="text-lg lg:text-xl">Fall 2023 - Spring 2025</h3>
                             <ul className="list-disc text-md lg:text-lg list-inside mb-5">
