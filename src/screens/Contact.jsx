@@ -4,10 +4,10 @@ import linkedin from "../assets/images/linkedin.svg"
 
 const images = import.meta.glob('../assets/travel/*.{jpg,png}', { eager: true });
 
-export default function Contact() {
+export default function Contact({darkMode}) {
     return (
         <>
-            <div className="flex flex-col md:flex-row h-full bg-green-300 justify-evenly items-center">
+            <div className={`flex flex-col md:flex-row h-full justify-evenly items-center ${darkMode ? "bg-green-900 text-white" : "bg-green-300"}`}>
                 <div className="space-y-5 text-center md:p-10">
                     <h1 className="font-serif font-bold text-4xl md:text-6xl">Contact Me</h1>
                     <p className="text-lg md:text-xl">Phone: <a className="hover:text-blue-600" href="tel:443-251-6876"><u>(443) 251-6876</u></a></p>

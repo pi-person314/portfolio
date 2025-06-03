@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import me from "../assets/images/me.jpg"
+import { useEffect } from "react";
 
-export default function Home() {
+export default function Home({darkMode}) {
     return (
         // dark mode: green700 -> green800 -> green700, white text
-        <div className="flex flex-col lg:flex-row justify-evenly items-center h-full bg-gradient-to-b from-green-400 via-green-300 to-green-400">
+        <div className={`flex flex-col lg:flex-row justify-evenly items-center h-full bg-gradient-to-b ${darkMode ? "from-green-900 via-green-800 to-green-900 text-white" : "from-green-400 via-green-300 to-green-400"}`}>
             <div className="m-5 md:m-10">
                 <h1 className="text-5xl md:text-7xl text-center font-serif drop-shadow-2xl pb-10">Welcome, I'm<br/><strong>Jaden</strong></h1>
                 <p className="text-lg md:text-xl text-center">I'm a freshman at UC Berkeley majoring in <strong>computer science</strong> and <strong>math</strong>!</p>
