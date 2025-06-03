@@ -9,7 +9,7 @@ export default function About({darkMode}) {
     return (
         <>
             <div className={`flex flex-col md:flex-row justify-between h-full overflow-y-auto ${darkMode ? "bg-green-900 text-white" : "bg-green-300"}`}>
-                <div className="flex flex-col justify-between space-y-10 m-10 md:w-2/5">
+                <div className="flex flex-col justify-between space-y-10 m-10 mb-16 md:w-2/5">
                     <div>
                         <h1 className="text-3xl lg:text-5xl mb-5 font-serif justify-self-center md:justify-self-auto"><b>Profile</b></h1>
                         <p className="text-md lg:text-lg">Highly motivated and hardworking college student planning to pursue a career in <b>software engineering</b>.
@@ -28,7 +28,7 @@ export default function About({darkMode}) {
                                 <li>Applied and optimized cosine similarity and other semantic analyses to clean and merge extracted topics</li>
                                 <li>Utilized NetworkX and the Louvain algorithm to cluster countries based on strategic interests
                                     <ul className="ml-8">
-                                        <li>– Authored and published a <a className="hover:text-blue-600" href="https://arxiv.org/abs/2505.17234"><u>paper</u></a> titled "Quantifying Global Networks of Exchange through the Louvain Method"</li>
+                                        <li>– Authored and published a <a className={`hover:text-blue-${darkMode ? 300 : 600}`} href="https://arxiv.org/abs/2505.17234"><u>paper</u></a> titled "Quantifying Global Networks of Exchange through the Louvain Method"</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -45,7 +45,7 @@ export default function About({darkMode}) {
                         </ul>
                     </div>
                 </div>
-                <div className="flex flex-col items-center m-10 md:w-1/2">
+                <div className="flex flex-col items-center m-10 mb-16 md:w-1/2">
                     <h1 className="text-2xl lg:text-3xl mb-5"><b>Hobbies</b></h1>
                     <div className="md:overflow-y-auto space-y-5">
                         <div className={`flex flex-col md:flex-row shadow-xl rounded-xl p-5 w-full md:h-1/5 ${darkMode ? "bg-green-700" : "bg-green-400"}`}>
@@ -83,7 +83,7 @@ export default function About({darkMode}) {
                             <div className="mb-5 md:mb-0 md:mr-10 md:overflow-y-auto">
                                 <h2 className="text-lg lg:text-xl"><b>Travel</b></h2>
                                 <p className="text-md lg:text-lg">Went on tons of cool trips with parents over school breaks.
-                                    Took lots of pictures (check out my <Link className="hover:text-blue-600" to="/contact"><u>contact page</u></Link>)!
+                                    Took lots of pictures (check out my <Link className={`hover:text-blue-${darkMode ? 300 : 600}`} to="/contact"><u>contact page</u></Link>)!
                                     Places visited: China, Alaska, Hawaii, Mexico, Costa Rica, UK, France, Spain, Italy, Greece, Turkey, etc.
                                 </p>
                             </div>

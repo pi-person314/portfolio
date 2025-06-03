@@ -10,8 +10,8 @@ export default function Contact({darkMode}) {
             <div className={`flex flex-col md:flex-row h-full justify-evenly items-center ${darkMode ? "bg-green-900 text-white" : "bg-green-300"}`}>
                 <div className="space-y-5 text-center md:p-10">
                     <h1 className="font-serif font-bold text-4xl md:text-6xl">Contact Me</h1>
-                    <p className="text-lg md:text-xl">Phone: <a className="hover:text-blue-600" href="tel:443-251-6876"><u>(443) 251-6876</u></a></p>
-                    <p className="text-lg md:text-xl">Email: <a className="hover:text-blue-600" href="mailto:jmli314@berkeley.edu"><u>jmli314@berkeley.edu</u></a></p>
+                    <p className="text-lg md:text-xl">Phone: <a className={`hover:text-blue-${darkMode ? 300 : 600}`} href="tel:443-251-6876"><u>(443) 251-6876</u></a></p>
+                    <p className="text-lg md:text-xl">Email: <a className={`hover:text-blue-${darkMode ? 300 : 600}`} href="mailto:jmli314@berkeley.edu"><u>jmli314@berkeley.edu</u></a></p>
                     <div className="flex items-center justify-center gap-10 scale-75">
                         <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://www.linkedin.com/in/jaden-li-23a873314/"><img src={linkedin} alt="LinkedIn"/></a>
                         <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://github.com/pi-person314"><img src={github} alt="GitHub"/></a>
