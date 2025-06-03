@@ -9,10 +9,10 @@ export default function About({darkMode}) {
     return (
         <>
             <div className={`flex flex-col md:flex-row justify-between h-full overflow-y-auto ${darkMode ? "bg-green-900 text-white" : "bg-green-300"}`}>
-                <div className="flex flex-col justify-between space-y-10 m-10 mb-16 md:w-2/5">
+                <div className="flex flex-col justify-between space-y-10 m-10 my-16 md:w-2/5">
                     <div>
-                        <h1 className="text-3xl lg:text-5xl mb-5 font-serif justify-self-center md:justify-self-auto"><b>Profile</b></h1>
-                        <p className="text-md lg:text-lg">Highly motivated and hardworking college student planning to pursue a career in <b>software engineering</b>.
+                        <h1 className="text-3xl lg:text-5xl mb-5 font-serif text-center md:text-start"><b>Profile</b></h1>
+                        <p className="text-md lg:text-lg text-center md:text-start">Highly motivated and hardworking college student planning to pursue a career in <b>software engineering</b>.
                             Proficient in <b>React JS</b>, <b>Tailwind CSS</b>, <b>Firebase</b>, <b>Pandas</b>, and <b>OpenCV</b>.
                             Also interested in training algorithmic problem-solving and proof-based reasoning for competitions such as <b>ICPC</b> and <b>Putnam</b>.
                             Always curious about the beauty of <b>math</b> and its intersections with <b>computer science</b> and <b>music</b>.
@@ -45,7 +45,7 @@ export default function About({darkMode}) {
                         </ul>
                     </div>
                 </div>
-                <div className="flex flex-col items-center m-10 mb-16 md:w-1/2">
+                <div className="flex flex-col items-center m-10 my-16 md:w-1/2">
                     <h1 className="text-2xl lg:text-3xl mb-5"><b>Hobbies</b></h1>
                     <div className="md:overflow-y-auto space-y-5">
                         <div className={`flex flex-col md:flex-row shadow-xl rounded-xl p-5 w-full md:h-1/5 ${darkMode ? "bg-green-700" : "bg-green-400"}`}>
