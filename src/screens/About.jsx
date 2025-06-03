@@ -28,7 +28,7 @@ export default function About({darkMode}) {
                                 <li>Applied and optimized cosine similarity and other semantic analyses to clean and merge extracted topics</li>
                                 <li>Utilized NetworkX and the Louvain algorithm to cluster countries based on strategic interests
                                     <ul className="ml-8">
-                                        <li>– Authored and published a <a className={`hover:text-blue-${darkMode ? 300 : 600}`} href="https://arxiv.org/abs/2505.17234"><u>paper</u></a> titled "Quantifying Global Networks of Exchange through the Louvain Method"</li>
+                                        <li>– Authored and published a <a className={`${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="https://arxiv.org/abs/2505.17234"><u>paper</u></a> titled "Quantifying Global Networks of Exchange through the Louvain Method"</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -83,7 +83,7 @@ export default function About({darkMode}) {
                             <div className="mb-5 md:mb-0 md:mr-10 md:overflow-y-auto">
                                 <h2 className="text-lg lg:text-xl"><b>Travel</b></h2>
                                 <p className="text-md lg:text-lg">Went on tons of cool trips with parents over school breaks.
-                                    Took lots of pictures (check out my <Link className={`hover:text-blue-${darkMode ? 300 : 600}`} to="/contact"><u>contact page</u></Link>)!
+                                    Took lots of pictures (check out my <Link className={`${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} to="/contact"><u>contact page</u></Link>)!
                                     Places visited: China, Alaska, Hawaii, Mexico, Costa Rica, UK, France, Spain, Italy, Greece, Turkey, etc.
                                 </p>
                             </div>
