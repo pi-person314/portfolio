@@ -1,6 +1,9 @@
 import me from "../assets/images/me.jpg"
 import github from "../assets/images/github.svg"
 import linkedin from "../assets/images/linkedin.svg"
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const images = import.meta.glob('../assets/travel/*.{jpg,png}', { eager: true });
 
@@ -17,13 +20,13 @@ export default function Contact({darkMode}) {
                         <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://github.com/pi-person314"><img src={github} alt="GitHub"/></a>
                     </div>
                 </div>
-                <div className="w-3/4 h-1/2 mb-5 md:mb-0 md:w-1/2 md:h-3/4 md:p-10">
-                    <div className="grid grid-cols-3 overflow-y-auto h-full">
+                <div className="w-3/4 h-1/2 mb-5 md:mb-0 md:w-2/5 md:h-auto md:p-10">
+                    <p className="text-md md:text-xl mb-3 text-center">Check out some of my travel photos!</p>
+                    <Slider dots={true} infinite={true} autoplay={true} speed={1000} autoplaySpeed={5000} slidesToShow={1} slidesToScroll={1}>
                         {Object.entries(images).map(([path, module], index) => (
                             <img key={index} src={module.default} alt={`Image ${index}`} className="shadow-lg aspect-square object-cover"/>
                         ))}
-                    </div>
-                    <p className="text-md md:text-xl mt-5 text-center">Check out some of my travel photos!</p>
+                    </Slider>
                 </div>
             </div>
         </>
