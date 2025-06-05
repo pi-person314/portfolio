@@ -3,12 +3,19 @@ import cello from "../assets/images/cello.png";
 import tennis from "../assets/images/tennis.png";
 import travel from "../assets/images/mosque.jpg";
 import pi from "../assets/images/pillow.jpg";
+import top from "../assets/images/top.png";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 export default function About({darkMode}) {
+    const outerDiv = useRef(null);
+    const goToTop = () => {
+        outerDiv.current.scrollTo({top: 0, behavior: 'smooth'});
+    };
+
     return (
         <>
-            <div className={`flex tiny:flex-col justify-between h-full overflow-y-auto ${darkMode ? "bg-green-900 text-white" : "bg-green-300"}`}>
+            <div ref={outerDiv} className={`flex tiny:flex-col justify-between h-full overflow-y-auto ${darkMode ? "bg-green-900 text-white" : "bg-green-300"}`}>
                 <div className="flex flex-col justify-between tiny:space-y-20 px-10 my-16 tiny:mb-0 tiny:w-full w-3/5">
                     <div>
                         <h1 className="text-3xl md:text-4xl mb-5 font-serif tiny:text-center text-start"><b>Profile</b></h1>
@@ -45,7 +52,7 @@ export default function About({darkMode}) {
                         </ul>
                     </div>
                 </div>
-                <div className="flex flex-col items-center px-10 my-16 tiny:mt-24 tiny:w-full w-3/5">
+                <div className="flex flex-col items-center px-10 my-16 tiny:mt-24 tiny:mb-0 tiny:w-full w-3/5">
                     <h1 className="text-xl md:text-2xl mb-5"><b>Hobbies</b></h1>
                     <div className="overflow-y-auto space-y-5">
                         <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-green-700" : "bg-green-400"}`}>
@@ -56,7 +63,7 @@ export default function About({darkMode}) {
                                     Continue to participate in weekly Codeforces and LeetCode contests.
                                 </p>
                             </div>
-                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={comp}/>
+                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={comp} alt="UMD High School Programming Contest"/>
                         </div>
                         <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-green-700" : "bg-green-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
@@ -67,7 +74,7 @@ export default function About({darkMode}) {
                                     Performed in various chamber groups (piano trio, cello quartet) with friends.
                                 </p>
                             </div>
-                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={cello}/>
+                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={cello} alt="Cello Quartet"/>
                         </div>
                         <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-green-700" : "bg-green-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
@@ -77,7 +84,7 @@ export default function About({darkMode}) {
                                     Continue to play with friends (doubles whenever possible!) and watch tournaments on TV.
                                 </p>
                             </div>
-                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={tennis}/>
+                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={tennis} alt="Doubles Tennis"/>
                         </div>
                         <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-green-700" : "bg-green-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
@@ -87,7 +94,7 @@ export default function About({darkMode}) {
                                     Places visited: China, Alaska, Hawaii, Mexico, Costa Rica, UK, France, Spain, Italy, Greece, Turkey, etc.
                                 </p>
                             </div>
-                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={travel}/>
+                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={travel} alt="Hagia Sophia"/>
                         </div>
                         <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-green-700" : "bg-green-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
@@ -96,10 +103,11 @@ export default function About({darkMode}) {
                                     Has grown into a passion for the number pi, as can be seen from my nickname (Pi Person), this website's logo, and my unwavering belief that pi is the best number out there.
                                 </p>
                             </div>
-                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={pi}/>
+                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={pi} alt="Pi Pillow"/>
                         </div>
                     </div>
                 </div>
+                <button className="invisible tiny:visible self-center scale-50" onClick={goToTop}><img className="hover:scale-105" src={top} alt="Back to Top"/></button>
             </div>
         </>
     );

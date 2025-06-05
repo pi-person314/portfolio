@@ -21,7 +21,7 @@ export default function Contact({darkMode}) {
                 </div>
                 <div className={`flex flex-col justify-center h-[30vh] w-[30vh] lg:h-[40vh] lg:w-[40vh] ${darkMode ? "" : "light"}`}>
                     <p className="text-sm lg:text-base mb-3 text-center">Check out some of my travel photos!</p>
-                    <Slider infinite={true} autoplay={true} speed={1000} autoplaySpeed={3000} slidesToShow={1} slidesToScroll={1}>
+                    <Slider infinite={true} autoplay={true} speed={1000} autoplaySpeed={2000} slidesToShow={1} slidesToScroll={1}>
                         {Object.entries(images).map(([path, module], index) => (
                             <img key={index} src={module.default} alt={`Image ${index}`} className="h-full w-full aspect-square object-cover"/>
                         ))}
