@@ -107,7 +107,7 @@ export default function About({darkMode}) {
                         </div>
                     </div>
                 </div>
-                <button className="invisible tiny:visible self-center scale-50" onClick={goToTop}><img className="hover:scale-105" src={top} alt="Back to Top"/></button>
+                <button className="hidden tiny:inline self-center scale-50" onClick={goToTop}><img className="hover:scale-105" src={top} alt="Back to Top"/></button>
             </div>
         </>
     );
