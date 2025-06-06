@@ -4,7 +4,7 @@ import mode from "../assets/images/mode.svg";
 
 export default function Header({toggleDarkMode}) {
     return (
-        <header className="flex justify-between space-x-5 bg-green-700 text-white p-5">
+        <header className="flex justify-between space-x-5 bg-zinc-600 text-white p-5">
             <div className="flex items-center">
                 <Link to="/">
                     <img src={pi} className="short:h-10 h-20 object-contain hover:animate-spin" alt="Pi Logo"/>

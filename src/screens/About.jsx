@@ -15,7 +15,7 @@ export default function About({darkMode}) {
 
     return (
         <>
-            <div ref={outerDiv} className={`flex tiny:flex-col justify-between h-full overflow-y-auto ${darkMode ? "bg-green-900 text-white" : "bg-green-300"}`}>
+            <div ref={outerDiv} className={`flex tiny:flex-col justify-between h-full overflow-y-auto ${darkMode ? "bg-zinc-800 text-white" : "bg-zinc-300"}`}>
                 <div className="flex flex-col justify-between tiny:space-y-20 px-10 my-16 tiny:mb-0 tiny:w-full w-3/5">
                     <div>
                         <h1 className="text-3xl md:text-4xl mb-5 font-serif tiny:text-center text-start"><b>Profile</b></h1>
@@ -55,20 +55,20 @@ export default function About({darkMode}) {
                 <div className="flex flex-col items-center px-10 my-16 tiny:mt-24 tiny:mb-0 tiny:w-full w-3/5">
                     <h1 className="text-xl md:text-2xl mb-5"><b>Hobbies</b></h1>
                     <div className="overflow-y-auto space-y-5">
-                        <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-green-700" : "bg-green-400"}`}>
+                        <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
                                 <h2 className="text-lg md:text-xl"><b>Competitive Programming / Math</b></h2>
-                                <p className="text-sm md:text-base tiny:text-lg">Competed in various regional and national programming competitions: UMD, Virginia Tech, M(IT)^2, CALICO, etc.
+                                <p className="text-sm md:text-base portrait:text-base tiny:text-lg">Competed in various regional and national programming competitions: UMD, Virginia Tech, M(IT)^2, CALICO, etc.
                                     Took the AMC 10/12 and AIME throughout high school and was captain of the Math Team.
                                     Continue to participate in weekly Codeforces and LeetCode contests.
                                 </p>
                             </div>
                             <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={comp} alt="UMD High School Programming Contest"/>
                         </div>
-                        <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-green-700" : "bg-green-400"}`}>
+                        <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
                                 <h2 className="text-lg md:text-xl"><b>Piano / Cello</b></h2>
-                                <p className="text-sm md:text-base tiny:text-lg">Started private lessons at the ages of 6 and 8. 
+                                <p className="text-sm md:text-base portrait:text-base tiny:text-lg">Started private lessons at the ages of 6 and 8. 
                                     Learned and fell in love with classical repertoire by Beethoven, Chopin, Tchaikovsky, etc.
                                     Led the county orchestra cello section and won the concerto competition as a pianist.
                                     Performed in various chamber groups (piano trio, cello quartet) with friends.
@@ -76,30 +76,30 @@ export default function About({darkMode}) {
                             </div>
                             <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={cello} alt="Cello Quartet"/>
                         </div>
-                        <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-green-700" : "bg-green-400"}`}>
+                        <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
                                 <h2 className="text-lg md:text-xl"><b>Tennis</b></h2>
-                                <p className="text-sm md:text-base tiny:text-lg">Settled on tennis after trying soccer, basketball, and baseball.
+                                <p className="text-sm md:text-base portrait:text-base tiny:text-lg">Settled on tennis after trying soccer, basketball, and baseball.
                                     Quickly improved with lots of practice and made it on the high school varsity team.
                                     Continue to play with friends (doubles whenever possible!) and watch tournaments on TV.
                                 </p>
                             </div>
                             <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={tennis} alt="Doubles Tennis"/>
                         </div>
-                        <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-green-700" : "bg-green-400"}`}>
+                        <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
                                 <h2 className="text-lg md:text-xl"><b>Travel</b></h2>
-                                <p className="text-sm md:text-base tiny:text-lg">Went on tons of cool trips with parents over school breaks.
+                                <p className="text-sm md:text-base portrait:text-base tiny:text-lg">Went on tons of cool trips with parents over school breaks.
                                     Took lots of pictures (check out my <Link className={`${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} to="/contact"><u>contact page</u></Link>)!
                                     Places visited: China, Alaska, Hawaii, Mexico, Costa Rica, UK, France, Spain, Italy, Greece, Turkey, etc.
                                 </p>
                             </div>
                             <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={travel} alt="Hagia Sophia"/>
                         </div>
-                        <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-green-700" : "bg-green-400"}`}>
+                        <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
                                 <h2 className="text-lg md:text-xl"><b>Pi</b></h2>
-                                <p className="text-sm md:text-base tiny:text-lg">Started when I memorized 100 digits for a pi memorization contest in elementary school.
+                                <p className="text-sm md:text-base portrait:text-base tiny:text-lg">Started when I memorized 100 digits for a pi memorization contest in elementary school.
                                     Has grown into a passion for the number pi, as can be seen from my nickname (Pi Person), this website's logo, and my unwavering belief that pi is the best number out there.
                                 </p>
                             </div>
@@ -107,7 +107,7 @@ export default function About({darkMode}) {
                         </div>
                     </div>
                 </div>
-                <button className="hidden tiny:inline self-center scale-50" onClick={goToTop}><img className="hover:scale-105" src={top} alt="Back to Top"/></button>
+                <button className="hidden tiny:inline self-center scale-50" onClick={goToTop}><img className={`hover:scale-105 ${darkMode ? "invert hue-rotate-180" : ""}`} src={top} alt="Back to Top"/></button>
             </div>
         </>
     );
