@@ -7,7 +7,7 @@ import Contact from "./screens/Contact"
 import { useState } from "react";
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);

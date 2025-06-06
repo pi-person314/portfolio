@@ -15,7 +15,7 @@ export default function About({darkMode}) {
 
     return (
         <>
-            <div ref={outerDiv} className={`flex tiny:flex-col justify-between h-full overflow-y-auto ${darkMode ? "bg-zinc-800 text-white" : "bg-zinc-300"}`}>
+            <div ref={outerDiv} className={`flex tiny:flex-col justify-between h-full overflow-y-auto font-montserrat ${darkMode ? "bg-zinc-800 text-white" : "bg-zinc-300"}`}>
                 <div className="flex flex-col justify-between tiny:space-y-20 px-10 my-16 tiny:mb-0 tiny:w-full w-3/5">
                     <div>
                         <h1 className="text-3xl md:text-4xl mb-5 font-serif tiny:text-center text-start"><b>Profile</b></h1>
@@ -26,7 +26,7 @@ export default function About({darkMode}) {
                         </p>
                     </div>
                     <div className="tiny:h-full h-1/4"> 
-                        <h1 className="text-xl md:text-2xl mb-5 tiny:justify-self-center justify-self-auto"><b>Experience</b></h1>
+                        <h1 className="text-xl md:text-2xl mb-5 tiny:justify-self-center justify-self-auto font-serif"><b>Experience</b></h1>
                         <div className="h-full overflow-y-auto">
                             <h2 className="text-lg md:text-xl"><b>JHU Applied Physics Lab ASPIRE Intern</b></h2>
                             <h3 className="text-lg md:text-xl">Fall 2023 - Spring 2025</h3>
@@ -42,7 +42,7 @@ export default function About({darkMode}) {
                         </div>
                     </div>
                     <div> 
-                        <h1 className="text-xl md:text-2xl mb-5 tiny:justify-self-center justify-self-auto"><b>Honors</b></h1>
+                        <h1 className="text-xl md:text-2xl mb-5 tiny:justify-self-center justify-self-auto font-serif"><b>Honors</b></h1>
                         <ul className="list-disc text-sm md:text-lg ml-5">
                             <li>3x American Invitational Mathematics Examination (AIME) Qualifer</li>
                             <li>Hack the Nest: First Place Overall</li>
@@ -53,7 +53,7 @@ export default function About({darkMode}) {
                     </div>
                 </div>
                 <div className="flex flex-col items-center px-10 my-16 tiny:mt-24 tiny:mb-0 tiny:w-full w-3/5">
-                    <h1 className="text-xl md:text-2xl mb-5"><b>Hobbies</b></h1>
+                    <h1 className="text-xl md:text-2xl mb-5 font-serif"><b>Hobbies</b></h1>
                     <div className="overflow-y-auto space-y-5">
                         <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
@@ -63,7 +63,7 @@ export default function About({darkMode}) {
                                     Continue to participate in weekly Codeforces and LeetCode contests.
                                 </p>
                             </div>
-                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={comp} alt="UMD High School Programming Contest"/>
+                            <img className="portrait:w-1/2 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={comp} alt="UMD High School Programming Contest"/>
                         </div>
                         <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
@@ -74,7 +74,7 @@ export default function About({darkMode}) {
                                     Performed in various chamber groups (piano trio, cello quartet) with friends.
                                 </p>
                             </div>
-                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={cello} alt="Cello Quartet"/>
+                            <img className="portrait:w-1/2 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={cello} alt="Cello Quartet"/>
                         </div>
                         <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
@@ -84,7 +84,7 @@ export default function About({darkMode}) {
                                     Continue to play with friends (doubles whenever possible!) and watch tournaments on TV.
                                 </p>
                             </div>
-                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={tennis} alt="Doubles Tennis"/>
+                            <img className="portrait:w-1/2 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={tennis} alt="Doubles Tennis"/>
                         </div>
                         <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
@@ -94,7 +94,7 @@ export default function About({darkMode}) {
                                     Places visited: China, Alaska, Hawaii, Mexico, Costa Rica, UK, France, Spain, Italy, Greece, Turkey, etc.
                                 </p>
                             </div>
-                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={travel} alt="Hagia Sophia"/>
+                            <img className="portrait:w-1/2 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={travel} alt="Hagia Sophia"/>
                         </div>
                         <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full tiny:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
                             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
@@ -103,7 +103,7 @@ export default function About({darkMode}) {
                                     Has grown into a passion for the number pi, as can be seen from my nickname (Pi Person), this website's logo, and my unwavering belief that pi is the best number out there.
                                 </p>
                             </div>
-                            <img className="portrait:w-1/3 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={pi} alt="Pi Pillow"/>
+                            <img className="portrait:w-1/2 portrait:self-center tiny:w-1/5 w-1/3 object-contain" src={pi} alt="Pi Pillow"/>
                         </div>
                     </div>
                 </div>

@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
       screens: {
         portrait: {raw: "(max-aspect-ratio: 1/1)"},
         short: {raw: "(max-height: 50rem)"},

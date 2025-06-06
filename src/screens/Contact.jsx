@@ -9,7 +9,7 @@ const images = import.meta.glob('../assets/travel/*.{jpg,png}', { eager: true })
 export default function Contact({darkMode}) {
     return (
         <>
-            <div className={`flex portrait:flex-col h-full justify-evenly items-center overflow-y-auto ${darkMode ? "bg-zinc-800 text-white" : "bg-zinc-300"}`}>
+            <div className={`flex portrait:flex-col h-full justify-evenly items-center overflow-y-auto font-montserrat ${darkMode ? "bg-zinc-800 text-white" : "bg-zinc-300"}`}>
                 <div className="space-y-5 text-center">
                     <h1 className="font-serif font-bold text-4xl lg:text-6xl">Contact Me</h1>
                     <p className="text-sm lg:text-lg">Phone: <a className={`${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="tel:443-251-6876"><u>(443) 251-6876</u></a></p>
