@@ -7,16 +7,16 @@ export default function Header({toggleDarkMode}) {
         <header className="flex justify-between space-x-5 bg-zinc-600 text-white p-5 font-montserrat">
             <div className="flex items-center">
                 <Link to="/">
-                    <img src={pi} className="short:h-10 h-20 object-contain hover:animate-spin" alt="Pi Logo"/>
+                    <img src={pi} className="tiny:h-10 h-20 object-contain hover:animate-spin" alt="Pi Logo"/>
                 </Link>
             </div>
             <div className="flex justify-center items-center mx-auto space-x-10">
-                <Link className="short:text-sm narrow:text-sm text-xl hover:text-blue-300" to="/about">About</Link>
-                <Link className="short:text-sm narrow:text-sm text-xl hover:text-blue-300" to="/projects">Projects</Link>
-                <Link className="short:text-sm narrow:text-sm text-xl hover:text-blue-300" to="/contact">Contact</Link>
+                <Link className="tiny:text-sm text-xl hover:text-blue-300" to="/about">About</Link>
+                <Link className="tiny:text-sm text-xl hover:text-blue-300" to="/projects">Projects</Link>
+                <Link className="tiny:text-sm text-xl hover:text-blue-300" to="/contact">Contact</Link>
             </div>
             <div className="flex items-center">
-                <button onClick={toggleDarkMode}><img src={mode} className="short:h-10 h-20 object-contain hover:scale-105" alt="Light/Dark Mode Button"/></button>
+                <button onClick={toggleDarkMode}><img src={mode} className="tiny:h-10 h-20 object-contain hover:scale-105" alt="Light/Dark Mode Button"/></button>
             </div>
         </header>
     );
