@@ -28,7 +28,7 @@ export default function Contact({darkMode}) {
 
                 {/* linkedin/github icons */}
                 <div className="flex items-center justify-center gap-10 scale-75">
-                    <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://www.linkedin.com/in/jaden-li-23a873314/">
+                    <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://www.linkedin.com/in/jadenmli/">
                         <img src={linkedin} alt="LinkedIn Profile"/>
                     </a>
                     <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://github.com/pi-person314">
