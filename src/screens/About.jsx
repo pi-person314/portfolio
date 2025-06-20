@@ -6,6 +6,7 @@ import pi from "../assets/images/pillow.jpg";
 import top from "../assets/images/top.png";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import Hobby from "../components/Hobby.jsx";
 
 export default function About({darkMode}) {
     const outerDiv = useRef(null);
@@ -67,75 +68,54 @@ export default function About({darkMode}) {
             <div className="flex flex-col items-center px-10 my-16 medium:mt-24 medium:mb-0 medium:w-full w-3/5">
                 <h1 className="text-xl md:text-2xl mb-5 font-serif"><b>Hobbies</b></h1>
                 <div className="overflow-y-auto space-y-5">
-                    {/* competitive programming / math */}
-                    <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full medium:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
-                        <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
-                            <h2 className="text-lg md:text-xl"><b>Competitive Programming / Math</b></h2>
-                            <p className="text-sm md:text-base portrait:text-base medium:text-lg">
-                                Competed in various regional and national programming competitions: UMD, Virginia Tech, M(IT)^2, CALICO, etc.
-                                Took the AMC 10/12 and AIME throughout high school and was captain of the Math Team.
-                                Continue to participate in weekly Codeforces and LeetCode contests.
-                            </p>
-                        </div>
-                        <img className="portrait:w-1/2 portrait:self-center medium:w-1/5 w-1/3 object-contain" src={comp} alt="UMD High School Programming Contest"/>
-                    </div>
+                    <Hobby
+                        title="Competitive Programming / Math"
+                        desc="Competed in various regional and national programming competitions: UMD, Virginia Tech, M(IT)^2, CALICO, etc.
+                        Took the AMC 10/12 and AIME throughout high school and was captain of the Math Team.
+                        Continue to participate in weekly Codeforces and LeetCode contests."
+                        image={comp}
+                        darkMode={darkMode}
+                    />
 
-                    {/* piano/cello */}
-                    <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full medium:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
-                        <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
-                            <h2 className="text-lg md:text-xl"><b>Piano / Cello</b></h2>
-                            <p className="text-sm md:text-base portrait:text-base medium:text-lg">
-                                Started private lessons at the ages of 6 and 8. 
-                                Learned and fell in love with classical repertoire by Beethoven, Chopin, Tchaikovsky, etc.
-                                Led the county orchestra cello section and won the concerto competition as a pianist.
-                                Performed in various chamber groups (piano trio, cello quartet) with friends.
-                            </p>
-                        </div>
-                        <img className="portrait:w-1/2 portrait:self-center medium:w-1/5 w-1/3 object-contain" src={cello} alt="Cello Quartet"/>
-                    </div>
+                    <Hobby
+                        title= "Piano / Cello"
+                        desc="Started private lessons at the ages of 6 and 8. 
+                        Learned and fell in love with classical repertoire by Beethoven, Chopin, Tchaikovsky, etc.
+                        Led the county orchestra cello section and won the concerto competition as a pianist.
+                        Performed in various chamber groups (piano trio, cello quartet) with friends."
+                        image={cello}
+                        darkMode={darkMode}
+                    />
 
-                    {/* tennis */}
-                    <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full medium:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
-                        <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
-                            <h2 className="text-lg md:text-xl"><b>Tennis</b></h2>
-                            <p className="text-sm md:text-base portrait:text-base medium:text-lg">
-                                Settled on tennis after trying soccer, basketball, and baseball.
-                                Quickly improved with lots of practice and made it on the high school varsity team.
-                                Continue to play with friends (doubles whenever possible!) and watch tournaments on TV.
-                            </p>
-                        </div>
-                        <img className="portrait:w-1/2 portrait:self-center medium:w-1/5 w-1/3 object-contain" src={tennis} alt="Doubles Tennis"/>
-                    </div>
+                    <Hobby
+                        title="Tennis"
+                        desc="Settled on tennis after trying soccer, basketball, and baseball.
+                        Quickly improved with lots of practice and made it on the high school varsity team.
+                        Continue to play with friends (doubles whenever possible!) and watch tournaments on TV."
+                        image={tennis}
+                        darkMode={darkMode}
+                    />
 
-                    {/* travel */}
-                    <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full medium:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
-                        <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
-                            <h2 className="text-lg md:text-xl"><b>Travel</b></h2>
-                            <p className="text-sm md:text-base portrait:text-base medium:text-lg">
-                                Went on tons of cool trips with parents over school breaks.
-                                Took lots of pictures (check out my {" "}
-                                <Link className={`${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} to="/contact">
-                                    <u>contact page</u>
-                                </Link>)! 
-                                <br/><br/>
-                                China, Alaska, Hawaii, Mexico, Costa Rica, UK, France, Spain, Italy, Greece, Turkey, etc.
-                            </p>
-                        </div>
-                        <img className="portrait:w-1/2 portrait:self-center medium:w-1/5 w-1/3 object-contain" src={travel} alt="Hagia Sophia"/>
-                    </div>
+                    <Hobby
+                        title="Travel"
+                        desc={<>Went on tons of cool trips with parents over school breaks.
+                        Favorite places were China, Alaska, Costa Rica, Scotland, Greece, and Turkey.
+                        Took lots of pictures (check out my {" "}
+                        <Link className={`${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} to="/contact">
+                            <u>contact page</u>
+                        </Link>)!</>}
+                        image={travel}
+                        darkMode={darkMode}
+                    />
 
-                    {/* pi */}
-                    <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full medium:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
-                        <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">
-                            <h2 className="text-lg md:text-xl"><b>Pi</b></h2>
-                            <p className="text-sm md:text-base portrait:text-base medium:text-lg">
-                                Started when I memorized 100 digits for a pi memorization contest in elementary school.
-                                Has grown into a passion for the number pi, as can be seen from my nickname (Pi Person), 
-                                this website's logo, and my unwavering belief that pi is the best number out there.
-                            </p>
-                        </div>
-                        <img className="portrait:w-1/2 portrait:self-center medium:w-1/5 w-1/3 object-contain" src={pi} alt="Pi Pillow"/>
-                    </div>
+                    <Hobby
+                        title="Pi"
+                        desc="Started when I memorized 100 digits for a pi memorization contest in elementary school.
+                        Has grown into a passion for the number pi, as can be seen from my nickname (Pi Person), 
+                        this website's logo, and my unwavering belief that pi is the best number out there."
+                        image={pi}
+                        darkMode={darkMode}
+                    />
                 </div>
             </div>
 
