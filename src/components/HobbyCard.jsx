@@ -1,4 +1,4 @@
-export default function Hobby({title, desc, image, darkMode}) {
+export default function HobbyCard({title, desc, image, darkMode}) {
     return (
         <div className={`flex portrait:flex-col shadow-xl rounded-xl p-5 w-full medium:h-auto h-1/4 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
             <div className="portrait:mb-5 mb-0 portrait:mr-0 mr-10 overflow-y-auto">

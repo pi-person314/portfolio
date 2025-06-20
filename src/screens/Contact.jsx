@@ -28,10 +28,10 @@ export default function Contact({darkMode}) {
 
                 {/* linkedin/github icons */}
                 <div className="flex items-center justify-center gap-10 scale-75">
-                    <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://www.linkedin.com/in/jadenmli/">
+                    <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://www.linkedin.com/in/jadenmli/" target="_blank">
                         <img src={linkedin} alt="LinkedIn Profile"/>
                     </a>
-                    <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://github.com/pi-person314">
+                    <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://github.com/pi-person314" target="_blank">
                         <img className={`${darkMode ? "invert hue-rotate-180" : ""}`} src={github} alt="GitHub Profile"/>
                     </a>
                 </div>
@@ -42,7 +42,7 @@ export default function Contact({darkMode}) {
                 <p className="text-sm lg:text-lg mb-3 text-center">Check out some of my travel photos!</p>
                 <Slider infinite={true} autoplay={true} speed={1000} autoplaySpeed={2000} slidesToShow={1} slidesToScroll={1}>
                     {Object.entries(images).map(([path, module], index) => (
-                        <img key={index} src={module.default} alt={`Image ${index}`} className="aspect-square object-cover"/>
+                        <img src={module.default} alt={`Image ${index}`} className="aspect-square object-cover"/>
                     ))}
                 </Slider>
             </div>

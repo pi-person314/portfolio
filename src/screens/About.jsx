@@ -6,7 +6,7 @@ import pi from "../assets/images/pillow.jpg";
 import top from "../assets/images/top.png";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-import Hobby from "../components/Hobby.jsx";
+import HobbyCard from "../components/HobbyCard.jsx";
 
 export default function About({darkMode}) {
     const outerDiv = useRef(null);
@@ -22,7 +22,7 @@ export default function About({darkMode}) {
                     <h1 className="text-3xl md:text-4xl mb-5 font-serif medium:text-center text-start"><b>Profile</b></h1>
                     <p className="text-sm md:text-lg medium:text-center text-start">
                         Highly motivated and hardworking college student planning to pursue a career in <b>software engineering</b>.
-                        Proficient in <b>React JS</b>, <b>Tailwind CSS</b>, <b>Firebase</b>, <b>Pandas</b>, and <b>OpenCV</b>.
+                        Proficient in <b>React JS</b>, <b>Tailwind CSS</b>, <b>Node.js</b>, <b>MongoDB</b>, <b>Firebase</b>, <b>Tensorflow</b>, and <b>Pandas</b>.
                         Also interested in training algorithmic problem-solving and proof-based reasoning for competitions such as <b>ICPC</b> and <b>Putnam</b>.
                         Always curious about the beauty of <b>math</b> and its intersections with <b>computer science</b> and <b>music</b>.
                     </p>
@@ -40,7 +40,7 @@ export default function About({darkMode}) {
                             <li>Utilized NetworkX and the Louvain algorithm to cluster countries based on strategic interests
                                 <ul className="ml-8">
                                     <li>– Authored and uploaded a preprint {" "}
-                                        <a className={`${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="https://arxiv.org/abs/2505.17234">
+                                        <a className={`${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="https://arxiv.org/abs/2505.17234" target="_blank">
                                             <u>paper</u>
                                         </a>
                                         {" "}titled "Quantifying Global Networks of Exchange through the Louvain Method"
@@ -68,7 +68,7 @@ export default function About({darkMode}) {
             <div className="flex flex-col items-center px-10 my-16 medium:mt-24 medium:mb-0 medium:w-full w-3/5">
                 <h1 className="text-xl md:text-2xl mb-5 font-serif"><b>Hobbies</b></h1>
                 <div className="overflow-y-auto space-y-5">
-                    <Hobby
+                    <HobbyCard
                         title="Competitive Programming / Math"
                         desc="Competed in various regional and national programming competitions: UMD, Virginia Tech, M(IT)^2, CALICO, etc.
                         Took the AMC 10/12 and AIME throughout high school and was captain of the Math Team.
@@ -77,7 +77,7 @@ export default function About({darkMode}) {
                         darkMode={darkMode}
                     />
 
-                    <Hobby
+                    <HobbyCard
                         title= "Piano / Cello"
                         desc="Started private lessons at the ages of 6 and 8. 
                         Learned and fell in love with classical repertoire by Beethoven, Chopin, Tchaikovsky, etc.
@@ -87,7 +87,7 @@ export default function About({darkMode}) {
                         darkMode={darkMode}
                     />
 
-                    <Hobby
+                    <HobbyCard
                         title="Tennis"
                         desc="Settled on tennis after trying soccer, basketball, and baseball.
                         Quickly improved with lots of practice and made it on the high school varsity team.
@@ -96,7 +96,7 @@ export default function About({darkMode}) {
                         darkMode={darkMode}
                     />
 
-                    <Hobby
+                    <HobbyCard
                         title="Travel"
                         desc={<>Went on tons of cool trips with parents over school breaks.
                         Favorite places were China, Alaska, Costa Rica, Scotland, Greece, and Turkey.
@@ -108,7 +108,7 @@ export default function About({darkMode}) {
                         darkMode={darkMode}
                     />
 
-                    <Hobby
+                    <HobbyCard
                         title="Pi"
                         desc="Started when I memorized 100 digits for a pi memorization contest in elementary school.
                         Has grown into a passion for the number pi, as can be seen from my nickname (Pi Person), 
