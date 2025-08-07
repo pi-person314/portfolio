@@ -16,63 +16,46 @@ export default function About({darkMode}) {
 
     return (
         <div ref={outerDiv} className={`flex medium:flex-col justify-between h-full overflow-y-auto font-montserrat ${darkMode ? "bg-zinc-800 text-white" : "bg-zinc-300"}`}>
-            <div className="flex flex-col justify-between medium:space-y-20 px-10 my-16 medium:mb-0 medium:w-full w-3/5">
+            <div className="flex flex-col space-y-12 px-10 my-12 medium:mb-0 medium:w-full w-3/5">
                 {/* profile */}
-                <div>
+                <div className="flex-1">
                     <h1 className="text-3xl md:text-4xl mb-5 font-serif medium:text-center text-start"><b>Profile</b></h1>
                     <p className="text-sm md:text-lg medium:text-center text-start">
-                        Highly motivated and hardworking college student planning to pursue a career in <b>software engineering</b>.
-                        Proficient in <b>React JS</b>, <b>Tailwind CSS</b>, <b>Node.js</b>, <b>MongoDB</b>, <b>Firebase</b>, <b>Tensorflow</b>, and <b>Pandas</b>.
-                        Also interested in training algorithmic problem-solving and proof-based reasoning for competitions such as <b>ICPC</b> and <b>Putnam</b>.
-                        Always curious about the beauty of <b>math</b> and its intersections with <b>computer science</b> and <b>music</b>.
+                        Highly motivated and hardworking college student looking for a career in full-stack development and/or data analysis.
+                        Proficient in <i>Python</i>, <i>React JS</i>, <i>Tailwind CSS</i>, <i>Express.js</i>, <i>Node.js</i>, <i>MongoDB</i>, <i>Firebase</i>, <i>Pandas</i>, <i>NumPy</i>, and <i>NLTK</i>.
+                        Enjoys training algorithmic problem-solving and proof-based reasoning skills for ICPC and Putnam.
+                        Curious about the beauty of math and its intersections with computer science, music, and sports.
                     </p>
                 </div>
 
                 {/* experience */}
-                <div className="medium:h-full h-1/5"> 
-                    <h1 className="text-xl md:text-2xl mb-5 medium:justify-self-center justify-self-auto font-serif"><b>Experience</b></h1>
-                    <div className="h-full overflow-y-auto pr-3">
+                <div className="flex-1 flex flex-col overflow-y-auto medium:overflow-y-visible">
+                    <h1 className="text-xl md:text-2xl mb-5 medium:text-center font-serif"><b>Experience</b></h1>
+                    <div className="pr-3">
                         <h2 className="text-lg md:text-xl"><b>JHU Applied Physics Lab ASPIRE Intern</b></h2>
                         <h3 className="text-lg md:text-xl">Fall 2023 - Spring 2025</h3>
                         <ul className="list-disc text-sm md:text-lg list-inside mb-5">
-                            <li>Facilitated employees with the testing of an AI that evaluates logic and reasoning in government reports</li>
-                            <li>Applied and optimized cosine similarity and other semantic analyses to clean and merge extracted topics</li>
-                            <li>Utilized NetworkX and the Louvain algorithm to cluster countries based on strategic interests
-                                <ul className="ml-8">
-                                    <li>– Authored and uploaded a preprint {" "}
-                                        <a className={`${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="https://arxiv.org/abs/2505.17234" target="_blank">
-                                            <u>paper</u>
-                                        </a>
-                                        {" "}titled "Quantifying Global Networks of Exchange through the Louvain Method"
-                                    </li>
-                                </ul>
+                            <li>Collaborated with national security analysts to test an LLM that evaluates logic and reasoning in government reports</li>
+                            <li>Authored a {" "}
+                                <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="https://arxiv.org/abs/2505.17234" target="_blank">
+                                    <u>paper</u>
+                                </a> describing our network analysis of countries and their strategic interests using <i>NetworkX</i> and the <i>Louvain Method</i>
                             </li>
+                            <li>Researched and applied cosine similarity to clean and merge extracted topics</li>
                         </ul>
                     </div>
-                </div>
-
-                {/* honors */}
-                <div> 
-                    <h1 className="text-xl md:text-2xl mb-5 medium:justify-self-center justify-self-auto font-serif"><b>Honors</b></h1>
-                    <ul className="list-disc text-sm md:text-lg ml-5">
-                        <li>3x American Invitational Mathematics Examination (AIME) Qualifer</li>
-                        <li>Hack the Nest: First Place Overall</li>
-                        <li>MathWorks Math Modeling Challenge: Technical Computing Honorable Mention</li>
-                        <li>University of Maryland High School Programming Contest: 3rd Place</li>
-                        <li>Maryland All State Senior Orchestra Principal Cellist</li>
-                    </ul>
                 </div>
             </div>
             
             {/* hobbies */}
-            <div className="flex flex-col items-center px-10 my-16 medium:mt-24 medium:mb-0 medium:w-full w-3/5">
+            <div className="flex flex-col items-center px-10 my-12 medium:mb-0 medium:w-full w-3/5">
                 <h1 className="text-xl md:text-2xl mb-5 font-serif"><b>Hobbies</b></h1>
                 <div className="overflow-y-auto space-y-5">
                     <HobbyCard
                         title="Competitive Programming / Math"
-                        desc="Competed in various regional and national programming competitions: UMD, Virginia Tech, M(IT)^2, CALICO, etc.
-                        Took the AMC 10/12 and AIME throughout high school and was captain of the Math Team.
-                        Continue to participate in weekly Codeforces and LeetCode contests."
+                        desc="Competed in various regional and national programming competitions:
+                        UMD, Virginia Tech, M(IT)^2, CALICO, etc.
+                        Took the AMC 10/12 and AIME throughout high school and was captain of the Math Team."
                         image={comp}
                         darkMode={darkMode}
                     />
@@ -80,7 +63,6 @@ export default function About({darkMode}) {
                     <HobbyCard
                         title= "Piano / Cello"
                         desc="Started private lessons at the ages of 6 and 8. 
-                        Learned and fell in love with classical repertoire by Beethoven, Chopin, Tchaikovsky, etc.
                         Led the county orchestra cello section and won the concerto competition as a pianist.
                         Performed in various chamber groups (piano trio, cello quartet) with friends."
                         image={cello}
@@ -89,7 +71,7 @@ export default function About({darkMode}) {
 
                     <HobbyCard
                         title="Tennis"
-                        desc="Settled on tennis after trying soccer, basketball, and baseball.
+                        desc="Started playing during the pandemic with my dad.
                         Quickly improved with lots of practice and made it on the high school varsity team.
                         Continue to play with friends (doubles whenever possible!) and watch tournaments on TV."
                         image={tennis}
@@ -101,7 +83,7 @@ export default function About({darkMode}) {
                         desc={<>Went on tons of cool trips with parents over school breaks.
                         Favorite places were China, Alaska, Costa Rica, Scotland, Greece, and Turkey.
                         Took lots of pictures (check out my {" "}
-                        <Link className={`${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} to="/contact">
+                        <Link className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} to="/contact">
                             <u>contact page</u>
                         </Link>)!</>}
                         image={travel}
@@ -111,8 +93,8 @@ export default function About({darkMode}) {
                     <HobbyCard
                         title="Pi"
                         desc="Started when I memorized 100 digits for a pi memorization contest in elementary school.
-                        Has grown into a passion for the number pi, as can be seen from my nickname (Pi Person), 
-                        this website's logo, and my unwavering belief that pi is the best number out there."
+                        Has grown into a passion for the number pi, as can be seen
+                        from this website's logo and my belief that pi is the best number out there."
                         image={pi}
                         darkMode={darkMode}
                     />

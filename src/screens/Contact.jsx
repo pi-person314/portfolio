@@ -15,31 +15,31 @@ export default function Contact({darkMode}) {
                 {/* phone/email */}
                 <p className="text-sm lg:text-lg">
                     Phone:{" "}
-                    <a className={`${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="tel:443-251-6876">
+                    <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="tel:443-251-6876">
                         <u>(443) 251-6876</u>
                     </a>
                 </p>
                 <p className="text-sm lg:text-lg">
                     Email:{" "}
-                    <a className={`${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="mailto:jmli314@berkeley.edu">
+                    <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="mailto:jmli314@berkeley.edu">
                         <u>jmli314@berkeley.edu</u>
                     </a>
                 </p>
 
                 {/* linkedin/github icons */}
                 <div className="flex items-center justify-center gap-10 scale-75">
-                    <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://www.linkedin.com/in/jadenmli/" target="_blank">
+                    <a className="transition hover:scale-110 duration:300 ease-in-out" href="https://www.linkedin.com/in/jadenmli/" target="_blank">
                         <img src={linkedin} alt="LinkedIn Profile"/>
                     </a>
-                    <a className="transition hover:scale-105 duration:300 ease-in-out" href="https://github.com/pi-person314" target="_blank">
+                    <a className="transition hover:scale-110 duration:300 ease-in-out" href="https://github.com/pi-person314" target="_blank">
                         <img className={`${darkMode ? "invert hue-rotate-180" : ""}`} src={github} alt="GitHub Profile"/>
                     </a>
                 </div>
             </div>
 
             {/* travel photo slider */}
-            <div className={`flex flex-col justify-center tiny:mb-10 h-[40vh] w-[40vh] tiny:h-[60vw] tiny:w-[60vw] ${darkMode ? "" : "light"}`}>
-                <p className="text-sm lg:text-lg mb-3 text-center">Check out some of my travel photos!</p>
+            <div className={`flex flex-col justify-center tiny:my-10 h-[40vh] w-[40vh] tiny:h-[60vw] tiny:w-[60vw] ${darkMode ? "" : "light"}`}>
+                <p className="text-sm lg:text-base mb-3 text-center">Check out my travel photos!</p>
                 <Slider infinite={true} autoplay={true} speed={1000} autoplaySpeed={2000} slidesToShow={1} slidesToScroll={1}>
                     {Object.entries(images).map(([path, module], index) => (
                         <img src={module.default} alt={`Image ${index}`} className="aspect-square object-cover"/>

@@ -1,11 +1,15 @@
-export default function ProjectCard({title, desc, image, darkMode}) {
+import { useState } from "react";
+
+export default function ProjectCard({title, tech, desc, image, darkMode}) {
+    const [ details, setDetails ] = useState(false);
+
     return (
-        <div className={`flex flex-col space-y-5 justify-evenly shadow-xl rounded-xl p-10 m-10 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
-            <img className="tiny:h-2/3 h-1/2 justify-self-center object-contain" src={image} alt={title}/>
-            <h1 className="text-xl lg:text-4xl text-center font-serif"><b>{title}</b></h1>
-            <ul className="text-sm lg:text-lg list-disc list-inside">
-                {desc.map(bullet => <li>{bullet}</li>)}
-            </ul>
+        <div className={`flex flex-col justify-between items-center shadow-xl rounded-xl space-y-4 p-10 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
+            <h1 className="text-center text-2xl lg:text-3xl font-serif"><b>{title}</b></h1>
+            {details && <p className="text-center text-sm lg:text-base italic">{tech}</p>}
+            {details ? <ul className="text-sm lg:text-base list-disc list-inside">{desc.map(bullet => <li>{bullet}</li>)}</ul>
+            : <img className="h-52 object-contain" src={image} alt={title}/>}
+            <p onClick={() => setDetails(!details)} className={`text-sm lg:text-base underline duration-300 cursor-pointer ${darkMode ? "hover:text-zinc-400" : "hover:text-zinc-500"}`}>{details ? "Hide" : "View"} Details</p>
         </div>
     )
 }
