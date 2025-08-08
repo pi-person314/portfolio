@@ -10,8 +10,6 @@ export default function Contact({darkMode}) {
     return (
         <div className={`flex tiny:flex-col h-full justify-evenly items-center overflow-y-auto font-montserrat ${darkMode ? "bg-zinc-800 text-white" : "bg-zinc-300"}`}>
             <div className="space-y-5 text-center m-10">
-                <h1 className="font-serif font-bold text-4xl lg:text-6xl">Contact Me</h1>
-
                 {/* phone/email */}
                 <p className="text-sm lg:text-lg">
                     Phone:{" "}
@@ -38,7 +36,7 @@ export default function Contact({darkMode}) {
             </div>
 
             {/* travel photo slider */}
-            <div className={`flex flex-col justify-center tiny:my-10 h-[40vh] w-[40vh] tiny:h-[60vw] tiny:w-[60vw] ${darkMode ? "" : "light"}`}>
+            <div className={`flex flex-col justify-center tiny:my-10 h-[50vh] w-[50vh] tiny:h-[50vw] tiny:w-[50vw] ${darkMode ? "" : "light"}`}>
                 <p className="text-sm lg:text-base mb-3 text-center">Check out my travel photos!</p>
                 <Slider infinite={true} autoplay={true} speed={1000} autoplaySpeed={2000} slidesToShow={1} slidesToScroll={1}>
                     {Object.entries(images).map(([path, module], index) => (
