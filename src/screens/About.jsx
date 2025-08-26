@@ -15,7 +15,7 @@ export default function About({darkMode}) {
     };
 
     return (
-        <div ref={outerDiv} className={`flex medium:flex-col justify-between h-full overflow-y-auto font-montserrat ${darkMode ? "bg-zinc-800 text-white" : "bg-zinc-300"}`}>
+        <div ref={outerDiv} className="flex medium:flex-col justify-between justify-self-center max-w-[100rem] h-full overflow-y-auto font-montserrat">
             <div className="flex flex-col space-y-12 px-10 my-12 medium:mb-0 medium:w-full w-3/5">
                 {/* profile */}
                 <div className="flex-1">

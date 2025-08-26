@@ -17,7 +17,7 @@ export default function App() {
     <div className="flex flex-col h-screen">
       <Router>
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
-        <div className="flex-1 overflow-hidden">
+        <div className={`flex-1 overflow-hidden ${darkMode ? "bg-zinc-800 text-white" : "bg-zinc-300"}`}>
           <Routes>
             <Route path="/" element={<Home darkMode={darkMode}/>}/>
             <Route path="/about" element={<About darkMode={darkMode}/>}/>

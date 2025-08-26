@@ -8,7 +8,7 @@ const images = import.meta.glob('../assets/travel/*.{jpg,png}', { eager: true })
 
 export default function Contact({darkMode}) {
     return (
-        <div className={`flex tiny:flex-col h-full justify-evenly items-center p-8 overflow-y-auto font-montserrat ${darkMode ? "bg-zinc-800 text-white" : "bg-zinc-300"}`}>
+        <div className="flex tiny:flex-col h-full justify-evenly items-center p-8 overflow-y-auto font-montserrat">
             <div className="space-y-5 text-center m-10">
                 {/* email/phone */}
                 <p className="text-sm lg:text-lg">

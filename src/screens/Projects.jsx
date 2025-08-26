@@ -5,7 +5,7 @@ import ProjectCard from "../components/ProjectCard.jsx";
 
 export default function Projects({darkMode}) {
     return (
-        <div className={`tiny:flex tiny:flex-col grid grid-cols-2 lg:auto-rows-[28rem] gap-10 p-10 overflow-y-auto h-full font-montserrat ${darkMode ? "bg-zinc-800 text-white" : "bg-zinc-300"}`}>
+        <div className="tiny:flex tiny:flex-col grid grid-cols-2 lg:auto-rows-[28rem] gap-10 p-10 overflow-y-auto h-full font-montserrat">
             <ProjectCard 
                 title={<a href="https://drill-share.vercel.app" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
                     Drill Share
