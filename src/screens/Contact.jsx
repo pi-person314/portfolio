@@ -8,19 +8,19 @@ const images = import.meta.glob('../assets/travel/*.{jpg,png}', { eager: true })
 
 export default function Contact({darkMode}) {
     return (
-        <div className={`flex tiny:flex-col h-full justify-evenly items-center overflow-y-auto font-montserrat ${darkMode ? "bg-zinc-800 text-white" : "bg-zinc-300"}`}>
+        <div className={`flex tiny:flex-col h-full justify-evenly items-center p-8 overflow-y-auto font-montserrat ${darkMode ? "bg-zinc-800 text-white" : "bg-zinc-300"}`}>
             <div className="space-y-5 text-center m-10">
-                {/* phone/email */}
-                <p className="text-sm lg:text-lg">
-                    Phone:{" "}
-                    <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="tel:443-251-6876">
-                        <u>(443) 251-6876</u>
-                    </a>
-                </p>
+                {/* email/phone */}
                 <p className="text-sm lg:text-lg">
                     Email:{" "}
                     <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="mailto:jmli314@berkeley.edu">
                         <u>jmli314@berkeley.edu</u>
+                    </a>
+                </p>
+                <p className="text-sm lg:text-lg">
+                    Phone:{" "}
+                    <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="tel:443-251-6876">
+                        <u>(443) 251-6876</u>
                     </a>
                 </p>
 
