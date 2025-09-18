@@ -12,7 +12,6 @@ export default {
       screens: {
         portrait: {raw: "(max-aspect-ratio: 1/1)"},
         tiny: {raw: "(max-aspect-ratio: 1/1) or (max-height: 40rem) or (max-width: 40rem)"},
-        medium: {raw: "(max-width: 80rem) or (max-height: 40rem)"},
         short: {raw: "(max-height: 40rem)"}
       }
     }

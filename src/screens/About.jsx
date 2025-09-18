@@ -15,12 +15,12 @@ export default function About({darkMode}) {
     };
 
     return (
-        <div ref={outerDiv} className="flex medium:flex-col justify-between justify-self-center max-w-[100rem] p-4 h-full overflow-y-auto font-montserrat">
-            <div className="flex flex-col space-y-12 px-10 my-12 medium:mb-0 medium:w-full w-3/5">
+        <div ref={outerDiv} className="flex flex-col justify-between justify-self-center max-w-[100rem] p-4 h-full overflow-y-auto font-montserrat">
+            <div className="flex flex-col space-y-12 px-10 my-12 mb-0 w-full">
                 {/* profile */}
                 <div className="flex-1">
-                    <h1 className="text-2xl md:text-3xl mb-5 font-serif medium:text-center text-start"><b>Profile</b></h1>
-                    <p className="text-xs md:text-base medium:text-center text-start">
+                    <h1 className="text-2xl md:text-3xl mb-5 font-serif text-center"><b>Profile</b></h1>
+                    <p className="text-xs md:text-base text-center">
                         Highly motivated and hardworking college student looking for a career in full-stack development and/or data analysis.
                         Proficient in <i>Python</i>, <i>React JS</i>, <i>Tailwind CSS</i>, <i>Express.js</i>, <i>Node.js</i>, <i>MongoDB</i>, <i>Firebase</i>, <i>Pandas</i>, <i>NumPy</i>, and <i>NLTK</i>.
                         Enjoys training algorithmic problem-solving and proof-based reasoning skills for ICPC and Putnam.
@@ -29,8 +29,8 @@ export default function About({darkMode}) {
                 </div>
 
                 {/* experience */}
-                <div className="flex-1 flex flex-col overflow-y-auto medium:overflow-y-visible">
-                    <h1 className="text-2xl md:text-3xl mb-5 medium:text-center font-serif"><b>Experience</b></h1>
+                <div className="flex-1 flex flex-col overflow-y-visible">
+                    <h1 className="text-2xl md:text-3xl mb-5 text-center font-serif"><b>Experience</b></h1>
                     <div className="pr-3">
                         <h2 className="md:text-lg"><b>JHU Applied Physics Lab ASPIRE Intern</b></h2>
                         <h3 className="md:text-lg">Fall 2023 - Spring 2025</h3>
@@ -48,7 +48,7 @@ export default function About({darkMode}) {
             </div>
             
             {/* hobbies */}
-            <div className="flex flex-col items-center px-10 my-12 medium:mb-0 medium:w-full w-3/5">
+            <div className="flex flex-col items-center px-10 my-12 mb-0 w-full">
                 <h1 className="text-2xl md:text-3xl mb-5 font-serif"><b>Hobbies</b></h1>
                 <div className="overflow-y-auto space-y-5">
                     <HobbyCard
@@ -102,7 +102,7 @@ export default function About({darkMode}) {
             </div>
 
             {/* back to top button */}
-            <button className="hidden medium:inline self-center scale-50" onClick={goToTop}>
+            <button className="self-center scale-50" onClick={goToTop}>
                 <img className={`hover:scale-105 ${darkMode ? "invert hue-rotate-180" : ""}`} src={top} alt="Back to Top Button"/>
             </button>
         </div>

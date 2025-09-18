@@ -5,9 +5,9 @@ import moon from "../assets/images/moon.png";
 
 export default function Header({darkMode, toggleDarkMode}) {
     return (
-        <header className="flex justify-between space-x-4 bg-zinc-600 text-white p-6 px-8 font-montserrat">
+        <header className="flex justify-between space-x-4 bg-zinc-600 text-white p-6 font-montserrat">
             {/* home button (pi) */}
-            <div className="flex items-center">
+            <div className="flex justify-center items-center w-12">
                 <Link to="/">
                     <img src={pi} className="tiny:h-8 h-12 object-contain hover:animate-spin" title="Home Button"/>
                 </Link>
@@ -21,7 +21,7 @@ export default function Header({darkMode, toggleDarkMode}) {
             </div>
 
             {/* theme button */}
-            <div className="flex items-center">
+            <div className="flex justify-center items-center w-12">
                 <button onClick={toggleDarkMode}>
                     <img src={darkMode ? sun : moon} className="tiny:h-8 h-12 object-contain duration-300 hover:scale-110" title="Theme Button"/>
                 </button>

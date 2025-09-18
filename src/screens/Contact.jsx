@@ -9,13 +9,13 @@ const images = import.meta.glob('../assets/travel/*.{jpg,png}', { eager: true })
 export default function Contact({darkMode}) {
     return (
         <div className="flex tiny:flex-col h-full justify-evenly items-center p-8 overflow-y-auto font-montserrat">
-            <div className="space-y-5 text-center m-10">
+            <div className={`text-center space-y-5 p-12 rounded-xl shadow-xl m-10 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
                 {/* email/phone */}
                 <p className="text-sm lg:text-lg">
-                    Email:{" "}
-                    <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="mailto:jmli314@berkeley.edu">
-                        <u>jmli314@berkeley.edu</u>
-                    </a>
+                Email:{" "}
+                <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="mailto:jmli314@berkeley.edu">
+                    <u>jmli314@berkeley.edu</u>
+                </a>
                 </p>
                 <p className="text-sm lg:text-lg">
                     Phone:{" "}
@@ -37,10 +37,10 @@ export default function Contact({darkMode}) {
 
             {/* travel photo slider */}
             <div className={`flex flex-col justify-center tiny:my-10 h-[50vh] w-[50vh] tiny:h-[50vw] tiny:w-[50vw] ${darkMode ? "" : "light"}`}>
-                <p className="text-sm lg:text-base mb-3 text-center">Check out my travel photos!</p>
+                <p className="text-sm lg:text-base mb-4 text-center">Check out my travel photos!</p>
                 <Slider infinite={true} autoplay={true} speed={1000} autoplaySpeed={2000} slidesToShow={1} slidesToScroll={1}>
                     {Object.entries(images).map(([path, module], index) => (
-                        <img src={module.default} alt={`Image ${index}`} className="aspect-square object-cover"/>
+                        <img src={module.default} alt={`Image ${index}`} className="aspect-square object-cover rounded-2xl"/>
                     ))}
                 </Slider>
             </div>
