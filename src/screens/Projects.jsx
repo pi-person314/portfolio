@@ -1,6 +1,7 @@
-import lingly from "../assets/images/lingly.png"
-import graph from "../assets/images/graph.png"
-import drill from "../assets/images/drill.png"
+import lingly from "../assets/images/projects/lingly.png"
+import graph from "../assets/images/projects/graph.png"
+import drill from "../assets/images/projects/drill.png"
+import calico from "../assets/images/projects/calico.png"
 import ProjectCard from "../components/ProjectCard.jsx";
 
 export default function Projects({darkMode}) {
@@ -14,9 +15,21 @@ export default function Projects({darkMode}) {
                 desc={[
                     "Full-stack website with the goal of providing sports players a platform to share and discover new ways to train",
                     "User profile and drill data stored in MongoDB, extracted and updated with an Express REST API",
-                    "Levenshtein distance searching, filters, and sorting functionality for ease of access to drills",
+                    "Levenshtein distance searching, filters, and sorting functionality for ease of access to drills"
                 ]}
                 image={drill}
+                darkMode={darkMode}
+            />
+
+            <ProjectCard 
+                title="CALICO Data Pipeline"
+                tech="Python, Pandas, DOMjudge API, Google Spreadsheets"
+                desc={[
+                    "Updated and maintained a complex system that extracts and analyzes contest registration data",
+                    "Implemented a new feature that automatically creates and updates DOMjudge accounts",
+                    "Integrated Python scripts with Google Spreadsheets for data storage and processing"
+                ]}
+                image={calico}
                 darkMode={darkMode}
             />
             
@@ -24,9 +37,9 @@ export default function Projects({darkMode}) {
                 title="Country-Topic Grapher"
                 tech="Python, NetworkX, Pandas, NLTK"
                 desc={[
-                    "Extracts country and topic data from over 2,000 Congressional Research Service reports to investigate international relations",
-                    "Represents countries as nodes and shared topics between countries as weighted edges using NetworkX",
-                    "Uses the Louvain method to cluster countries into 10 groups (shown by colors)"
+                    "Extracted country and topic data from over 2,000 Congressional Research Service reports to investigate international relations",
+                    "Represented countries as nodes and shared topics between countries as weighted edges using NetworkX",
+                    "Utilized the Louvain method to cluster countries into 10 groups (shown by colors)"
                 ]}
                 image={graph}
                 darkMode={darkMode}
@@ -34,7 +47,7 @@ export default function Projects({darkMode}) {
 
             <ProjectCard 
                 title="Lingly"
-                tech="React, Tailwind, Firebase, Google Cloud"
+                tech="React, Tailwind, Firebase, Google Cloud, ElevenLabs"
                 desc={[
                     "Multilingual chat app with automatic translation of incoming messages into the user's native language",
                     "Friends and chat rooms managed in Firebase",
@@ -43,10 +56,6 @@ export default function Projects({darkMode}) {
                 image={lingly}
                 darkMode={darkMode}
             />
-
-            <div className={`flex justify-center items-center shadow-xl rounded-xl p-10 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
-                <p className={`text-center text-2xl animate-pulse ${darkMode ? "text-gray-400" : "text-gray-500"}`}>Coming Soon...</p>
-            </div>
         </div>
     );
 };

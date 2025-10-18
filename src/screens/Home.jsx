@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import me from "../assets/images/me.jpg"
 
 export default function Home({darkMode}) {
     return (

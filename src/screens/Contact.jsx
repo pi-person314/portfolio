@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const images = import.meta.glob('../assets/travel/*.{jpg,png}', { eager: true });
+const images = import.meta.glob('../assets/images/travel/*.{jpg,png}', { eager: true });
 
 export default function Contact({darkMode}) {
     return (

@@ -1,8 +1,8 @@
-import comp from "../assets/images/umd.jpg";
-import cello from "../assets/images/cello.png";
-import tennis from "../assets/images/tennis.png";
-import travel from "../assets/images/mosque.jpg";
-import pi from "../assets/images/pillow.jpg";
+import comp from "../assets/images/hobbies/umd.jpg";
+import cello from "../assets/images/hobbies/cello.png";
+import tennis from "../assets/images/hobbies/tennis.png";
+import travel from "../assets/images/hobbies/mosque.jpg";
+import pi from "../assets/images/hobbies/pillow.jpg";
 import top from "../assets/images/top.png";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
