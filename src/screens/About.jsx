@@ -15,8 +15,8 @@ export default function About({darkMode}) {
     };
 
     return (
-        <div ref={outerDiv} className="flex flex-col justify-between justify-self-center max-w-[100rem] p-4 h-full overflow-y-auto font-montserrat">
-            <div className="flex flex-col space-y-12 px-10 my-12 mb-0 w-full">
+        <div ref={outerDiv} className="flex flex-col justify-between p-4 h-full overflow-y-auto font-montserrat">
+            <div className="flex flex-col space-y-12 px-10 my-12 mb-0 mx-auto w-full max-w-[100rem]">
                 {/* profile */}
                 <div className="flex-1">
                     <h1 className="text-2xl md:text-3xl mb-5 font-serif text-center"><b>Profile</b></h1>
@@ -32,6 +32,12 @@ export default function About({darkMode}) {
                 <div className="flex-1 flex flex-col overflow-y-visible">
                     <h1 className="text-2xl md:text-3xl mb-5 text-center font-serif"><b>Experience</b></h1>
                     <div className="pr-3">
+                        <h2 className="md:text-lg"><b>QueryHat Full Stack Developer Intern</b></h2>
+                        <h3 className="md:text-lg">Fall 2025</h3>
+                        <ul className="list-disc text-xs md:text-base list-inside mb-5">
+                            <li>Expanding a system of microservices that enables users to query a chatbot for detailed analyses of external data</li>
+                        </ul>
+                        
                         <h2 className="md:text-lg"><b>JHU Applied Physics Lab ASPIRE Intern</b></h2>
                         <h3 className="md:text-lg">Fall 2023 - Spring 2025</h3>
                         <ul className="list-disc text-xs md:text-base list-inside mb-5">
@@ -48,7 +54,7 @@ export default function About({darkMode}) {
             </div>
             
             {/* hobbies */}
-            <div className="flex flex-col items-center px-10 my-12 mb-0 w-full">
+            <div className="flex flex-col items-center px-10 my-12 mb-0 mx-auto w-full max-w-[100rem]">
                 <h1 className="text-2xl md:text-3xl mb-5 font-serif"><b>Hobbies</b></h1>
                 <div className="overflow-y-auto space-y-5">
                     <HobbyCard

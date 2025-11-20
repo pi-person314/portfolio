@@ -7,7 +7,7 @@ export default function Home({darkMode}) {
                 Jaden Li
             </h1>
             <p className="text-sm md:text-lg text-center mb-2">
-                I'm a freshman at UC Berkeley majoring in <strong>computer science</strong> and <strong>math</strong>!
+                I'm an undergraduate at UC Berkeley majoring in <strong>computer science</strong> and <strong>math</strong>!
             </p>
             <p className="text-sm md:text-lg text-center">
                 Check out some of my <Link className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} to="/about"><u>interests</u></Link> and 
