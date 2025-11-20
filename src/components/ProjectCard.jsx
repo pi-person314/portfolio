@@ -4,8 +4,8 @@ export default function ProjectCard({title, tech, desc, image, darkMode}) {
     const [ details, setDetails ] = useState(false);
 
     return (
-        <div className={`flex flex-col justify-between items-center shadow-xl rounded-2xl space-y-8 p-8 tiny:px-6 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
-            <h1 className="text-center text-2xl lg:text-3xl font-serif"><b>{title}</b></h1>
+        <div className={`flex flex-col justify-between items-center shadow-xl rounded-2xl space-y-8 p-10 tiny:px-6 ${darkMode ? "bg-zinc-700" : "bg-zinc-400"}`}>
+            <h1 className="text-center text-2xl lg:text-3xl font-domine"><b>{title}</b></h1>
 
             {details ? 
                 <div className="flex flex-col justify-center space-y-4 h-60">

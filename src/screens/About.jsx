@@ -16,13 +16,13 @@ export default function About({darkMode}) {
 
     return (
         <div ref={outerDiv} className="flex flex-col justify-between p-4 h-full overflow-y-auto font-montserrat">
-            <div className="flex flex-col space-y-12 px-10 my-12 mb-0 mx-auto w-full max-w-[100rem]">
+            <div className="flex flex-col space-y-12 px-10 my-12 mb-0 mx-auto w-full max-w-[80rem]">
                 {/* profile */}
                 <div className="flex-1">
-                    <h1 className="text-2xl md:text-3xl mb-5 font-serif text-center"><b>Profile</b></h1>
+                    <h1 className="text-2xl md:text-3xl mb-5 font-domine text-center"><b>Profile</b></h1>
                     <p className="text-xs md:text-base text-center">
                         Highly motivated and hardworking college student looking for a career in full-stack development and/or data analysis.
-                        Proficient in <i>Python</i>, <i>React JS</i>, <i>Tailwind CSS</i>, <i>Express.js</i>, <i>Node.js</i>, <i>MongoDB</i>, <i>Firebase</i>, <i>Pandas</i>, <i>NumPy</i>, and <i>NLTK</i>.
+                        Proficient in <i>Python</i>, <i>C++</i>, <i>Java</i>, <i>React JS</i>, <i>Tailwind CSS</i>, <i>Express.js</i>, <i>Node.js</i>, <i>MongoDB</i>, <i>Firebase</i>, <i>Pandas</i>, <i>NumPy</i>, and <i>NLTK</i>.
                         Enjoys training algorithmic problem-solving and proof-based reasoning skills for ICPC and Putnam.
                         Curious about the beauty of math and its intersections with computer science, music, and sports.
                     </p>
@@ -30,7 +30,7 @@ export default function About({darkMode}) {
 
                 {/* experience */}
                 <div className="flex-1 flex flex-col overflow-y-visible">
-                    <h1 className="text-2xl md:text-3xl mb-5 text-center font-serif"><b>Experience</b></h1>
+                    <h1 className="text-2xl md:text-3xl mb-5 text-center font-domine"><b>Experience</b></h1>
                     <div className="pr-3">
                         <h2 className="md:text-lg"><b>QueryHat Full Stack Developer Intern</b></h2>
                         <h3 className="md:text-lg">Fall 2025</h3>
@@ -54,8 +54,8 @@ export default function About({darkMode}) {
             </div>
             
             {/* hobbies */}
-            <div className="flex flex-col items-center px-10 my-12 mb-0 mx-auto w-full max-w-[100rem]">
-                <h1 className="text-2xl md:text-3xl mb-5 font-serif"><b>Hobbies</b></h1>
+            <div className="flex flex-col items-center px-10 my-12 mb-0 mx-auto w-full max-w-[80rem]">
+                <h1 className="text-2xl md:text-3xl mb-5 font-domine"><b>Hobbies</b></h1>
                 <div className="overflow-y-auto space-y-5">
                     <HobbyCard
                         title="Competitive Programming / Math"

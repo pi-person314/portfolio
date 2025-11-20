@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
+        domine: ['Domine', 'sans-serif']
       },
       screens: {
         portrait: {raw: "(max-aspect-ratio: 1/1)"},

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Home({darkMode}) {
     return (
         <div className={`flex flex-col justify-center h-full p-8 font-montserrat bg-gradient-to-b ${darkMode ? "from-zinc-800 via-zinc-700 to-zinc-800 text-white" : "from-zinc-400 via-zinc-300 to-zinc-400"}`}>
-            <h1 className="text-4xl md:text-6xl text-center font-bold font-serif drop-shadow-2xl mb-6">
+            <h1 className="text-4xl md:text-6xl text-center font-bold font-domine drop-shadow-2xl mb-6">
                 Jaden Li
             </h1>
             <p className="text-sm md:text-lg text-center mb-2">
