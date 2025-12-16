@@ -22,19 +22,23 @@ export default function Projects({darkMode}) {
             />
 
             <ProjectCard 
-                title="CALICO Data Pipeline"
-                tech="Python, Pandas, DOMjudge API, Google Spreadsheets"
+                title={<a href="https://calico.cs.berkeley.edu/certificates" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
+                    CALICO Data Pipeline
+                </a>}
+                tech="Python, Pandas, DOMjudge API, Google Spreadsheets, JavaScript"
                 desc={[
                     "Updated and maintained a complex system that extracts and analyzes contest registration data",
-                    "Implemented a new feature that automatically creates and updates DOMjudge accounts",
-                    "Integrated Python scripts with Google Spreadsheets for data storage and processing"
+                    "Implemented a new feature that automatically creates and updates over 2,000 DOMjudge accounts",
+                    "Updated certificates with contest filtering and country ranks"
                 ]}
                 image={calico}
                 darkMode={darkMode}
             />
             
             <ProjectCard 
-                title="Country-Topic Grapher"
+                title={<a href="https://arxiv.org/abs/2505.17234" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
+                    Country-Topic Grapher
+                </a>}
                 tech="Python, NetworkX, Pandas, NLTK"
                 desc={[
                     "Extracted country and topic data from over 2,000 Congressional Research Service reports to investigate international relations",

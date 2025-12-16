@@ -34,13 +34,15 @@ export default function About({darkMode}) {
                     <div className="pr-3">
                         <h2 className="md:text-lg"><b>QueryHat Full Stack Developer Intern</b></h2>
                         <h3 className="md:text-lg">Fall 2025</h3>
-                        <ul className="list-disc text-xs md:text-base list-inside mb-5">
+                        <ul className="list-disc text-xs md:text-base list-inside mb-8">
                             <li>Expanding a system of microservices that enables users to query a chatbot for detailed analyses of external data</li>
+                            <li>Automating model evaluation using document/question datasets and natural language similarity measures to test the validity of chatbot responses</li>
+                            <li>Implementing a new tagging feature that allows users to categorize their documents and fine-tune the scope of their results</li>
                         </ul>
                         
-                        <h2 className="md:text-lg"><b>JHU Applied Physics Lab ASPIRE Intern</b></h2>
+                        <h2 className="md:text-lg"><b>JHU Applied Physics Lab Data Analysis Intern</b></h2>
                         <h3 className="md:text-lg">Fall 2023 - Spring 2025</h3>
-                        <ul className="list-disc text-xs md:text-base list-inside mb-5">
+                        <ul className="list-disc text-xs md:text-base list-inside mb-8">
                             <li>Collaborated with national security analysts to test an LLM that evaluates logic and reasoning in government reports</li>
                             <li>Authored a {" "}
                                 <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="https://arxiv.org/abs/2505.17234" target="_blank">
@@ -54,7 +56,7 @@ export default function About({darkMode}) {
             </div>
             
             {/* hobbies */}
-            <div className="flex flex-col items-center px-10 my-12 mb-0 mx-auto w-full max-w-[80rem]">
+            <div className="flex flex-col items-center px-10 my-8 mb-0 mx-auto w-full max-w-[80rem]">
                 <h1 className="text-2xl md:text-3xl mb-5 font-domine"><b>Hobbies</b></h1>
                 <div className="overflow-y-auto space-y-5">
                     <HobbyCard
