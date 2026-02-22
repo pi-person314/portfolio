@@ -107,12 +107,12 @@ export default function About({darkMode}) {
                         />
                     </div>
                 </div>
-
-                {/* back to top button */}
-                <button className="self-center scale-50" onClick={goToTop}>
-                    <img className={`hover:scale-105 ${darkMode ? "invert hue-rotate-180" : ""}`} src={top} alt="Back to Top Button"/>
-                </button>
             </div>
+
+            {/* back to top button */}
+            <button className="self-center scale-50" onClick={goToTop}>
+                <img className={`hover:scale-105 ${darkMode ? "invert hue-rotate-180" : ""}`} src={top} alt="Back to Top Button"/>
+            </button>
         </div>
     );
 };

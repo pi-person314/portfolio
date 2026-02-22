@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  scrollbar-color: rgba(155, 155, 155, 0.4) transparent;
+}
+
 .light .slick-prev::before,
 .light .slick-next::before {
   color: black !important;
