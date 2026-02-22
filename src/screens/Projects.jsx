@@ -55,8 +55,8 @@ export default function Projects({darkMode}) {
                     tech="React, Tailwind, Firebase, Google Cloud, ElevenLabs"
                     desc={[
                         "Multilingual chat app with automatic translation of incoming messages into the user's native language",
-                        "Friends and chat rooms managed in Firebase",
-                        "Aesthetic React + Tailwind UI with light/dark mode and animations"
+                        "Friend requests and chat rooms managed in Firebase",
+                        "Incorporated ElevenLabs voice cloning to transcribe and translate voice messages"
                     ]}
                     image={lingly}
                     darkMode={darkMode}
