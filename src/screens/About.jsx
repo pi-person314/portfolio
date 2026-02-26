@@ -1,4 +1,4 @@
-import comp from "../assets/images/hobbies/umd.jpg";
+import math from "../assets/images/hobbies/math.png";
 import cello from "../assets/images/hobbies/cello.png";
 import tennis from "../assets/images/hobbies/tennis.png";
 import travel from "../assets/images/hobbies/mosque.jpg";
@@ -22,7 +22,7 @@ export default function About({darkMode}) {
                     <h1 className="text-2xl md:text-3xl mb-5 font-domine text-center"><b>Profile</b></h1>
                     <p className="text-xs md:text-base text-center">
                         Highly motivated and hardworking college student looking for a career in full-stack development and/or data analysis.
-                        Proficient in <i>Python</i>, <i>C++</i>, <i>Java</i>, <i>React JS</i>, <i>Tailwind CSS</i>, <i>Express.js</i>, <i>Node.js</i>, <i>MongoDB</i>, <i>Firebase</i>, <i>Pandas</i>, <i>NumPy</i>, and <i>NLTK</i>.
+                        Proficient in <i>Python</i>, <i>C++</i>, <i>Java</i>, <i>TypeScript</i>, <i>React JS</i>, <i>Tailwind CSS</i>, <i>Express.js</i>, <i>Flask</i>, <i>MongoDB</i>, <i>Firebase</i>, <i>PyTorch</i>, <i>Pandas</i>, and <i>NLTK</i>.
                         Enjoys training algorithmic problem-solving and proof-based reasoning skills for ICPC and Putnam.
                         Curious about the beauty of math and its intersections with computer science, music, and sports.
                     </p>
@@ -40,7 +40,7 @@ export default function About({darkMode}) {
                             <li>Implemented a new tagging feature that allows users to categorize their documents and fine-tune the scope of their results</li>
                         </ul>
                         
-                        <h2 className="md:text-lg"><b>JHU Applied Physics Lab (Data Analysis Intern)</b></h2>
+                        <h2 className="md:text-lg"><b>JHU Applied Physics Lab (Research Intern)</b></h2>
                         <h3 className="md:text-lg">Fall 2023 - Spring 2025</h3>
                         <ul className="list-disc text-xs md:text-base list-inside mb-8">
                             <li>Collaborated with national security analysts to test an LLM that evaluates logic and reasoning in government reports</li>
@@ -49,7 +49,7 @@ export default function About({darkMode}) {
                                     <u>paper</u>
                                 </a> describing our network analysis of countries and their strategic interests using <i>NetworkX</i> and the <i>Louvain Method</i>
                             </li>
-                            <li>Researched and applied cosine similarity to clean and merge extracted topics</li>
+                            <li>Researched and optimized cosine similarity to clean and merge extracted topics</li>
                         </ul>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ export default function About({darkMode}) {
                             desc="Competed in various regional and national programming competitions:
                             UMD, Virginia Tech, M(IT)^2, CALICO, etc.
                             Took the AMC 10/12 and AIME throughout high school and was captain of the Math Team."
-                            image={comp}
+                            image={math}
                             darkMode={darkMode}
                         />
 

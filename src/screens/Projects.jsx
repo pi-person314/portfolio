@@ -51,12 +51,14 @@ export default function Projects({darkMode}) {
                 />
 
                 <ProjectCard 
-                    title="Lingly"
+                    title={<a href="https://devpost.com/software/lingly" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
+                        Lingly
+                    </a>}
                     tech="React, Tailwind, Firebase, Google Cloud, ElevenLabs"
                     desc={[
-                        "Multilingual chat app with automatic translation of incoming messages into the user's native language",
-                        "Friend requests and chat rooms managed in Firebase",
-                        "Incorporated ElevenLabs voice cloning to transcribe and translate voice messages"
+                        "Multilingual chat app that automatically translates messages into over 20 distinct languages using Google Cloud Translation APIs",
+                        "Integrated AI-powered voice transcription and translation with ElevenLabs for seamless multilingual voice messaging",
+                        "Designed and managed scalable user authentication, friend requests, chat rooms, and messaging infrastructure in Firebase"
                     ]}
                     image={lingly}
                     darkMode={darkMode}
