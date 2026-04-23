@@ -3,66 +3,116 @@ import cello from "../assets/images/hobbies/cello.png";
 import tennis from "../assets/images/hobbies/tennis.png";
 import travel from "../assets/images/hobbies/mosque.jpg";
 import pi from "../assets/images/hobbies/pillow.jpg";
-import top from "../assets/images/top.png";
+import siemens from "../assets/images/jobs/siemens.png";
+import queryhat from "../assets/images/jobs/queryhat.png";
+import apl from "../assets/images/jobs/apl.png";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import HobbyCard from "../components/HobbyCard.jsx";
+import JobCard from "../components/JobCard.jsx";
 
 export default function About({darkMode}) {
     const outerDiv = useRef(null);
-    const goToTop = () => {
-        outerDiv.current.scrollTo({top: 0, behavior: 'smooth'});
+    const profileRef = useRef(null);
+    const experienceRef = useRef(null);
+    const hobbiesRef = useRef(null);
+    const [sidebarOpen, setSidebarOpen] = useState(true);
+
+    const scrollToSection = (ref) => {
+        const containerTop = outerDiv.current.getBoundingClientRect().top;
+        const sectionTop = ref.current.getBoundingClientRect().top;
+        const scrollTop = outerDiv.current.scrollTop;
+        outerDiv.current.scrollTo({top: sectionTop - containerTop + scrollTop - 16, behavior: 'smooth'});
     };
 
     return (
         <div ref={outerDiv} className="flex flex-col justify-between p-4 h-full overflow-y-auto font-montserrat">
-            <div className="flex flex-col space-y-12 px-10 my-12 mb-0 mx-auto w-full max-w-[80rem]">
+            {/* section sidebar */}
+            <nav className={`hidden lg:flex short:hidden fixed left-6 top-[calc(50%+3rem)] -translate-y-1/2 flex-col z-10 border ${darkMode ? "border-white" : "border-black"} rounded-xl font-domine ${sidebarOpen ? "h-1/2" : ""}`}>
+                <button
+                    onClick={() => setSidebarOpen(!sidebarOpen)}
+                    className={`text-xl duration-300 ${sidebarOpen ? "absolute top-2 right-4" : "flex items-center justify-center w-10 h-10 leading-none"} ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}
+                    title={sidebarOpen ? "Minimize" : "Expand"}
+                >
+                    {sidebarOpen ? "«" : "»"}
+                </button>
+                {sidebarOpen && (
+                    <div className="flex flex-1 flex-col justify-center space-y-14 px-10">
+                        <button onClick={() => outerDiv.current.scrollTo({top: 0, behavior: 'smooth'})} className={`text-lg text-left duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
+                            Profile
+                        </button>
+                        <button onClick={() => scrollToSection(experienceRef)} className={`text-lg text-left duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
+                            Experience
+                        </button>
+                        <button onClick={() => scrollToSection(hobbiesRef)} className={`text-lg text-left duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
+                            Hobbies
+                        </button>
+                    </div>
+                )}
+            </nav>
+
+            <div className={`flex flex-col space-y-12 px-10 my-12 mx-auto w-full max-w-[80rem] transition-all duration-300 ${sidebarOpen ? "lg:pl-56" : "lg:pl-24"} short:lg:pl-10`}>
                 {/* profile */}
-                <div className="flex-1">
+                <div ref={profileRef} className="flex-1">
                     <h1 className="text-2xl md:text-3xl mb-5 font-domine text-center"><b>Profile</b></h1>
                     <p className="text-xs md:text-base text-center">
-                        Highly motivated and hardworking college student looking for a career in full-stack development and/or data analysis.
-                        Proficient in <i>Python</i>, <i>C++</i>, <i>Java</i>, <i>TypeScript</i>, <i>React JS</i>, <i>Tailwind CSS</i>, <i>Express.js</i>, <i>Flask</i>, <i>MongoDB</i>, <i>Firebase</i>, <i>PyTorch</i>, <i>Pandas</i>, and <i>NLTK</i>.
-                        Enjoys training algorithmic problem-solving and proof-based reasoning skills for ICPC and Putnam.
+                        Highly motivated and hardworking college student looking for a career in software engineering or machine learning research.<br/><br/>
+                        Proficient in <i>Python</i>, <i>C++</i>, <i>Java</i>, <i>TypeScript</i>, <i>React</i>, <i>Tailwind</i>, <i>Express</i>, <i>Flask</i>, <i>MongoDB</i>, <i>Firebase</i>, <i>PyTorch</i>, <i>Pandas</i>, <i>NLTK</i>,<br/>and of course <i>Claude Code</i>.<br/><br/>
+                        Enjoys training algorithmic problem-solving and proof-based reasoning skills for ICPC and Putnam.<br/>
                         Curious about the beauty of math and its intersections with computer science, music, and sports.
                     </p>
                 </div>
 
                 {/* experience */}
-                <div className="flex-1 flex flex-col overflow-y-visible">
+                <div ref={experienceRef} className="flex-1 flex flex-col overflow-y-visible">
                     <h1 className="text-2xl md:text-3xl mb-5 text-center font-domine"><b>Experience</b></h1>
-                    <div className="pr-3">
-                        <h2 className="md:text-lg"><b>QueryHat (Full Stack Developer Intern)</b></h2>
-                        <h3 className="md:text-lg">Fall 2025</h3>
-                        <ul className="list-disc text-xs md:text-base list-inside mb-8">
-                            <li>Expanded a system of microservices that enables users to query a chatbot for detailed analyses of external data</li>
-                            <li>Automated model evaluation using document/question datasets and natural language similarity measures to test the validity of chatbot responses</li>
-                            <li>Implemented a new tagging feature that allows users to categorize their documents and fine-tune the scope of their results</li>
-                        </ul>
-                        
-                        <h2 className="md:text-lg"><b>JHU Applied Physics Lab (Research Intern)</b></h2>
-                        <h3 className="md:text-lg">Fall 2023 - Spring 2025</h3>
-                        <ul className="list-disc text-xs md:text-base list-inside mb-8">
-                            <li>Collaborated with national security analysts to test an LLM that evaluates logic and reasoning in government reports</li>
-                            <li>Authored a {" "}
-                                <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="https://arxiv.org/abs/2505.17234" target="_blank">
-                                    <u>paper</u>
-                                </a> describing our network analysis of countries and their strategic interests using <i>NetworkX</i> and the <i>Louvain Method</i>
-                            </li>
-                            <li>Researched and optimized cosine similarity to clean and merge extracted topics</li>
-                        </ul>
+                    <div className="space-y-5">
+                        <JobCard
+                            title="Software Engineer Intern"
+                            date="Summer 2026"
+                            bullets={["TBD"]}
+                            image={siemens}
+                            darkMode={darkMode}
+                        />
+                        <JobCard
+                            title="Software Engineer Intern"
+                            date="Fall 2025"
+                            bullets={[
+                                "Expanded a system of microservices that enables users to query a chatbot for detailed analyses of external data",
+                                "Automated model evaluation using document QA datasets and natural language similarity measures to test the validity of chatbot responses",
+                                "Implemented a tagging feature that allows users to categorize their documents and fine-tune the scope of their results"
+                            ]}
+                            image={queryhat}
+                            darkMode={darkMode}
+                        />
+                        <JobCard
+                            title="Research Intern"
+                            date="Fall 2023 - Spring 2025"
+                            bullets={[
+                                "Developed and tested evaluation frameworks for AI models that evaluate logic and reasoning in government reports",
+                                <>Authored a{" "}
+                                    <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="https://arxiv.org/abs/2505.17234" target="_blank">
+                                        <u>paper</u>
+                                    </a> describing our network analysis of countries and their strategic interests using <i>NetworkX</i> and the <i>Louvain Method</i>
+                                </>,
+                                "Optimized cosine similarity and other semantic analyses to clean and merge 4,137 extracted topics"
+                            ]}
+                            image={apl}
+                            darkMode={darkMode}
+                        />
                     </div>
                 </div>
 
                 {/* hobbies */}
-                <div className="flex flex-col items-center">
+                <div ref={hobbiesRef} className="flex flex-col items-center">
                     <h1 className="text-2xl md:text-3xl mb-5 font-domine"><b>Hobbies</b></h1>
                     <div className="overflow-y-auto space-y-5">
                         <HobbyCard
                             title="Competitive Programming / Math"
                             desc="Competed in various regional and national programming competitions:
-                            UMD, Virginia Tech, M(IT)^2, CALICO, etc.
-                            Took the AMC 10/12 and AIME throughout high school and was captain of the Math Team."
+                            UMD, M(IT)^2, ICPC, etc.
+                            Took the AMC 10/12 and AIME throughout high school and was captain of the Math Team.
+                            Currently organizing the CALICO Informatics Competition at UC Berkeley!"
                             image={math}
                             darkMode={darkMode}
                         />
@@ -108,11 +158,6 @@ export default function About({darkMode}) {
                     </div>
                 </div>
             </div>
-
-            {/* back to top button */}
-            <button className="self-center scale-50" onClick={goToTop}>
-                <img className={`hover:scale-105 ${darkMode ? "invert hue-rotate-180" : ""}`} src={top} alt="Back to Top Button"/>
-            </button>
         </div>
     );
 };
