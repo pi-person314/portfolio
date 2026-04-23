@@ -24,7 +24,7 @@ export default function ProjectCard({title, subtitle, tech, desc, image, darkMod
                     }}
                 >
                     <h1 className="text-center text-xl lg:text-2xl xl:text-3xl font-domine"><b>{title}</b></h1>
-                    <p className="text-center text-xs lg:text-base italic mt-2">"{subtitle}"</p>
+                    <p className="text-center text-xs lg:text-sm italic mt-2">"{subtitle}"</p>
                     <div className="flex items-center flex-1 min-h-0 pt-6">
                         <img className="max-h-full object-contain rounded-xl" src={image} alt={title}/>
                     </div>
@@ -39,7 +39,7 @@ export default function ProjectCard({title, subtitle, tech, desc, image, darkMod
                     }}
                 >
                     <h1 className="text-center text-xl lg:text-2xl xl:text-3xl font-domine"><b>{title}</b></h1>
-                    <p className="text-center text-xs lg:text-base italic pt-4">{tech}</p>
+                    <p className="text-center text-xs lg:text-sm italic mt-4">{tech}</p>
                     <div className="flex-1 flex items-center min-h-0 w-full">
                         <ul className="text-xs lg:text-base list-disc list-inside space-y-2 w-full">{desc.map((bullet, index) => <li key={index}>{bullet}</li>)}</ul>
                     </div>
