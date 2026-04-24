@@ -17,6 +17,8 @@ export default function About({darkMode}) {
     const experienceRef = useRef(null);
     const hobbiesRef = useRef(null);
     const [sidebarOpen, setSidebarOpen] = useState(true);
+    const pianoLink = <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="https://www.youtube.com/watch?v=ae0l1NgdRQs&list=PLuo0lFk5yVMvvhQX2gmipeOC2X7wCnvR1" target="_blank"><u>piano</u></a>;
+    const celloLink = <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="https://www.youtube.com/watch?v=8a3DO8KyRNo&list=PLuo0lFk5yVMtmrlDwDqx68-aNZeejHGoy" target="_blank"><u>cello</u></a>;
 
     const scrollToSection = (ref) => {
         const containerTop = outerDiv.current.getBoundingClientRect().top;
@@ -78,7 +80,7 @@ export default function About({darkMode}) {
                             title="Software Engineer Intern"
                             date="Fall 2025"
                             bullets={[
-                                "Expanded a system of microservices that enables users to query a chatbot for detailed analyses of external data",
+                                "Expanded an AI-powered system of microservices that seamlessly integrates and analyzes multiple sources of external data",
                                 "Automated model evaluation using document QA datasets and natural language similarity measures to test the validity of chatbot responses",
                                 "Implemented a tagging feature that allows users to categorize their documents and fine-tune the scope of their results"
                             ]}
@@ -119,9 +121,10 @@ export default function About({darkMode}) {
 
                         <HobbyCard
                             title= "Piano / Cello"
-                            desc="Started private lessons at the ages of 6 and 8. 
+                            desc={<>Started private lessons at the ages of 6 and 8.
                             Led the county orchestra cello section and won the concerto competition as a pianist.
-                            Performed in various chamber groups (piano trio, cello quartet) with friends."
+                            Performed in various chamber groups (piano trio, cello quartet) with friends.
+                            Feel free to check out some of my performances ({pianoLink}, {celloLink})!</>}
                             image={cello}
                             darkMode={darkMode}
                         />
