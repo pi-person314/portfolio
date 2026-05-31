@@ -72,7 +72,10 @@ export default function About({darkMode}) {
                         <JobCard
                             title="Software Engineer Intern"
                             date="Summer 2026"
-                            bullets={["TBD"]}
+                            bullets={[
+                                "Leveraging generative AI tools to rapidly prototype full stack healthcare applications",
+                                "Converting state of the art models and algorithms into usable tools for internal and external customers"
+                            ]}
                             image={siemens}
                             darkMode={darkMode}
                         />
