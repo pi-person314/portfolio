@@ -7,9 +7,30 @@ import siemens from "../assets/images/jobs/siemens.png";
 import queryhat from "../assets/images/jobs/queryhat.png";
 import apl from "../assets/images/jobs/apl.png";
 import { Link } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import HobbyCard from "../components/HobbyCard.jsx";
 import JobCard from "../components/JobCard.jsx";
+
+const icons = {
+    profile: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 shrink-0">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+        </svg>
+    ),
+    experience: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 shrink-0">
+            <rect x="3" y="7" width="18" height="13" rx="2" />
+            <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+            <path d="M3 12h18" />
+        </svg>
+    ),
+    hobbies: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 shrink-0">
+            <path d="M12 21s-7-4.5-9.5-8.5C1 9 3 5.5 6.5 5.5c2 0 3.6 1.4 5.5 3 1.9-1.6 3.5-3 5.5-3C21 5.5 23 9 21.5 12.5 19 16.5 12 21 12 21z" />
+        </svg>
+    ),
+};
 
 export default function About({darkMode}) {
     const outerDiv = useRef(null);
@@ -17,43 +38,114 @@ export default function About({darkMode}) {
     const experienceRef = useRef(null);
     const hobbiesRef = useRef(null);
     const [sidebarOpen, setSidebarOpen] = useState(true);
+    const [activeSection, setActiveSection] = useState("profile");
+
+    const sections = [
+        { id: "profile", label: "Profile", ref: profileRef },
+        { id: "experience", label: "Experience", ref: experienceRef },
+        { id: "hobbies", label: "Hobbies", ref: hobbiesRef },
+    ];
     const pianoLink = <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="https://www.youtube.com/watch?v=ae0l1NgdRQs&list=PLuo0lFk5yVMvvhQX2gmipeOC2X7wCnvR1" target="_blank"><u>piano</u></a>;
     const celloLink = <a className={`duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`} href="https://www.youtube.com/watch?v=8a3DO8KyRNo&list=PLuo0lFk5yVMtmrlDwDqx68-aNZeejHGoy" target="_blank"><u>cello</u></a>;
 
-    const scrollToSection = (ref) => {
+    const scrollToSection = (section) => {
+        if (section.id === "profile") {
+            outerDiv.current.scrollTo({top: 0, behavior: 'smooth'});
+            return;
+        }
         const containerTop = outerDiv.current.getBoundingClientRect().top;
-        const sectionTop = ref.current.getBoundingClientRect().top;
+        const sectionTop = section.ref.current.getBoundingClientRect().top;
         const scrollTop = outerDiv.current.scrollTop;
         outerDiv.current.scrollTo({top: sectionTop - containerTop + scrollTop - 16, behavior: 'smooth'});
     };
 
+    useEffect(() => {
+        const el = outerDiv.current;
+        if (!el) return;
+        const onScroll = () => {
+            const containerTop = el.getBoundingClientRect().top;
+            let current = sections[0].id;
+            for (const section of sections) {
+                if (section.ref.current && section.ref.current.getBoundingClientRect().top - containerTop <= 120) {
+                    current = section.id;
+                }
+            }
+            setActiveSection(current);
+        };
+        el.addEventListener("scroll", onScroll);
+        onScroll();
+        return () => el.removeEventListener("scroll", onScroll);
+    }, []);
+
+    useEffect(() => {
+        const mq = window.matchMedia("(min-width: 1280px)");
+        const apply = () => setSidebarOpen(mq.matches);
+        apply();
+        mq.addEventListener("change", apply);
+        return () => mq.removeEventListener("change", apply);
+    }, []);
+
     return (
         <div ref={outerDiv} className="flex flex-col justify-between p-4 h-full overflow-y-auto font-montserrat">
             {/* section sidebar */}
-            <nav className={`hidden lg:flex short:hidden fixed left-6 top-[calc(50%+3rem)] -translate-y-1/2 flex-col z-10 border ${darkMode ? "border-white" : "border-black"} rounded-xl font-domine ${sidebarOpen ? "h-1/2" : ""}`}>
-                <button
-                    onClick={() => setSidebarOpen(!sidebarOpen)}
-                    className={`text-xl duration-300 ${sidebarOpen ? "absolute top-2 right-4" : "flex items-center justify-center w-10 h-10 leading-none"} ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}
-                    title={sidebarOpen ? "Minimize" : "Expand"}
-                >
-                    {sidebarOpen ? "«" : "»"}
-                </button>
-                {sidebarOpen && (
-                    <div className="flex flex-1 flex-col justify-center space-y-14 px-10">
-                        <button onClick={() => outerDiv.current.scrollTo({top: 0, behavior: 'smooth'})} className={`text-lg text-left duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
-                            Profile
-                        </button>
-                        <button onClick={() => scrollToSection(experienceRef)} className={`text-lg text-left duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
-                            Experience
-                        </button>
-                        <button onClick={() => scrollToSection(hobbiesRef)} className={`text-lg text-left duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
-                            Hobbies
-                        </button>
-                    </div>
-                )}
+            <nav
+                className={`hidden md:flex short:hidden fixed left-6 top-[calc(50%+3rem)] -translate-y-1/2 flex-col z-10 p-3 rounded-2xl font-domine shadow-lg backdrop-blur-xl border transition-all duration-300 ${sidebarOpen ? "w-56" : "w-[4.5rem]"} ${
+                    darkMode
+                        ? "bg-white/5 border-white/15 text-white shadow-black/40"
+                        : "bg-white/50 border-black/10 text-black shadow-black/10"
+                }`}
+            >
+                <div className={`flex items-center ${sidebarOpen ? "justify-between" : "justify-center"} mb-3 px-1`}>
+                    {sidebarOpen && (
+                        <span className="text-base font-bold tracking-wide">Sections</span>
+                    )}
+                    <button
+                        onClick={() => setSidebarOpen(!sidebarOpen)}
+                        className={`flex items-center justify-center w-8 h-8 rounded-lg text-lg leading-none duration-300 ${
+                            darkMode ? "hover:bg-white/10 hover:text-blue-300" : "hover:bg-black/5 hover:text-blue-600"
+                        }`}
+                        title={sidebarOpen ? "Minimize" : "Expand"}
+                    >
+                        {sidebarOpen ? "«" : "»"}
+                    </button>
+                </div>
+
+                <div className={`mb-2 text-[0.65rem] font-semibold uppercase tracking-[0.2em] ${sidebarOpen ? "px-3" : "text-center pl-[0.2em]"} ${darkMode ? "text-white/40" : "text-black/40"}`}>
+                    Menu
+                </div>
+
+                <div className="flex flex-col gap-1">
+                    {sections.map((section) => {
+                        const active = activeSection === section.id;
+                        return (
+                            <button
+                                key={section.id}
+                                onClick={() => scrollToSection(section)}
+                                title={section.label}
+                                className={`group relative flex items-center ${sidebarOpen ? "gap-3 px-3" : "justify-center px-0"} h-11 rounded-xl text-left duration-300 ${
+                                    active
+                                        ? darkMode
+                                            ? "bg-white/15 text-white"
+                                            : "bg-black/10 text-black"
+                                        : darkMode
+                                            ? "text-white/70 hover:bg-white/10 hover:text-white"
+                                            : "text-black/60 hover:bg-black/5 hover:text-black"
+                                }`}
+                            >
+                                <span
+                                    className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 rounded-r-full transition-all duration-300 ${
+                                        active ? "h-5" : "h-0"
+                                    } ${darkMode ? "bg-blue-300" : "bg-blue-600"}`}
+                                />
+                                {icons[section.id]}
+                                {sidebarOpen && <span className="text-base">{section.label}</span>}
+                            </button>
+                        );
+                    })}
+                </div>
             </nav>
 
-            <div className={`flex flex-col space-y-12 px-10 my-12 mx-auto w-full max-w-[80rem] transition-all duration-300 ${sidebarOpen ? "lg:pl-56" : "lg:pl-24"} short:lg:pl-10`}>
+            <div className={`flex flex-col space-y-12 px-10 my-12 mx-auto max-w-[80rem] transition-all duration-300 ${sidebarOpen ? "md:ml-[max(calc((100vw_-_80rem)/2),16.5rem)]" : "md:ml-[max(calc((100vw_-_80rem)/2),6.5rem)]"} short:!ml-auto`}>
                 {/* profile */}
                 <div ref={profileRef} className="flex-1">
                     <h1 className="text-2xl md:text-3xl mb-5 font-domine text-center"><b>Profile</b></h1>

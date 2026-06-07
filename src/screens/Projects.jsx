@@ -48,8 +48,8 @@ export default function Projects({darkMode}) {
                     tech="Python, Pandas, DOMjudge API, Google Spreadsheets, JavaScript"
                     desc={[
                         "Updated and maintained a complex system that extracts and analyzes contest registration data",
-                        "Implemented a new feature that automatically creates and updates over 2,000 DOMjudge accounts",
-                        "Updated certificates with contest filtering and country ranks"
+                        "Implemented a feature that automatically creates and updates over 2,000 accounts on DOMjudge",
+                        "Integrated cheating detection measures and updated certificates with contest filtering and country ranks"
                     ]}
                     image={calico}
                     darkMode={darkMode}
