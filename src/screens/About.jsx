@@ -89,20 +89,18 @@ export default function About({darkMode}) {
         <div ref={outerDiv} className="flex flex-col justify-between p-4 h-full overflow-y-auto font-montserrat">
             {/* section sidebar */}
             <nav
-                className={`hidden md:flex short:hidden fixed left-6 top-[calc(50%+3rem)] -translate-y-1/2 flex-col z-10 p-3 rounded-2xl font-domine shadow-lg backdrop-blur-xl border transition-all duration-300 ${sidebarOpen ? "w-56" : "w-[4.5rem]"} ${
-                    darkMode
-                        ? "bg-white/5 border-white/15 text-white shadow-black/40"
-                        : "bg-white/50 border-black/10 text-black shadow-black/10"
+                className={`hidden md:flex short:hidden fixed left-6 top-[calc(50%+3rem)] -translate-y-1/2 flex-col z-10 p-4 rounded-xl shadow-xl transition-all duration-300 ${sidebarOpen ? "w-56" : "w-[4.5rem]"} ${
+                    darkMode ? "bg-zinc-900" : "bg-zinc-100 text-black"
                 }`}
             >
-                <div className={`flex items-center ${sidebarOpen ? "justify-between" : "justify-center"} mb-3 px-1`}>
+                <div className={`flex items-center ${sidebarOpen ? "justify-between" : "justify-center"} mb-4 px-1`}>
                     {sidebarOpen && (
-                        <span className="text-base font-bold tracking-wide">Sections</span>
+                        <span className="text-base font-domine"><b>Sections</b></span>
                     )}
                     <button
                         onClick={() => setSidebarOpen(!sidebarOpen)}
                         className={`flex items-center justify-center w-8 h-8 rounded-lg text-lg leading-none duration-300 ${
-                            darkMode ? "hover:bg-white/10 hover:text-blue-300" : "hover:bg-black/5 hover:text-blue-600"
+                            darkMode ? "hover:text-blue-300" : "hover:text-blue-600"
                         }`}
                         title={sidebarOpen ? "Minimize" : "Expand"}
                     >
@@ -110,11 +108,7 @@ export default function About({darkMode}) {
                     </button>
                 </div>
 
-                <div className={`mb-2 text-[0.65rem] font-semibold uppercase tracking-[0.2em] ${sidebarOpen ? "px-3" : "text-center pl-[0.2em]"} ${darkMode ? "text-white/40" : "text-black/40"}`}>
-                    Menu
-                </div>
-
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-2">
                     {sections.map((section) => {
                         const active = activeSection === section.id;
                         return (
@@ -122,14 +116,14 @@ export default function About({darkMode}) {
                                 key={section.id}
                                 onClick={() => scrollToSection(section)}
                                 title={section.label}
-                                className={`group relative flex items-center ${sidebarOpen ? "gap-3 px-3" : "justify-center px-0"} h-11 rounded-xl text-left duration-300 ${
+                                className={`relative flex items-center ${sidebarOpen ? "gap-3 px-3" : "justify-center px-0"} h-12 rounded-lg text-left duration-300 ${
                                     active
                                         ? darkMode
-                                            ? "bg-white/15 text-white"
-                                            : "bg-black/10 text-black"
+                                            ? "bg-zinc-800 text-white"
+                                            : "bg-zinc-300 text-black"
                                         : darkMode
-                                            ? "text-white/70 hover:bg-white/10 hover:text-white"
-                                            : "text-black/60 hover:bg-black/5 hover:text-black"
+                                            ? "text-white/70 hover:bg-zinc-800/60 hover:text-white"
+                                            : "text-black/60 hover:bg-zinc-300/60 hover:text-black"
                                 }`}
                             >
                                 <span
