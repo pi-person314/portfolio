@@ -156,11 +156,12 @@ export default function About({darkMode}) {
                     <h1 className="text-2xl md:text-3xl mb-5 text-center font-domine"><b>Experience</b></h1>
                     <div className="space-y-5">
                         <JobCard
-                            title="Software Engineer Intern"
+                            title="Research Intern"
                             date="Summer 2026"
                             bullets={[
-                                "Leveraging generative AI tools to rapidly prototype full stack healthcare applications",
-                                "Converting state of the art models and algorithms into usable tools for internal and external customers"
+                                "Developing a novel text-to-image framework for synthesizing medical imaging data from anatomical descriptions",
+                                "Engineered a 50+ attribute schema encoding shape and material properties for LLM agent control of fine-grained anatomy",
+                                "Training conditional diffusion models across Slurm-scheduled CUDA GPU nodes to synthesize diverse medical images"
                             ]}
                             image={siemens}
                             darkMode={darkMode}
