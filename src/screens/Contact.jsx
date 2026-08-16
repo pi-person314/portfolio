@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const images = import.meta.glob('../assets/images/travel/*.{jpg,png}', { eager: true });
+const images = import.meta.glob('../assets/images/travel/*.webp', { eager: true });
 
 export default function Contact({darkMode}) {
     return (
@@ -38,9 +38,9 @@ export default function Contact({darkMode}) {
             {/* travel photo slider */}
             <div className={`flex flex-col justify-center tiny:my-10 h-[50vh] w-[50vh] tiny:h-[50vw] tiny:w-[50vw] ${darkMode ? "" : "light"}`}>
                 <p className="text-sm lg:text-base mb-4 text-center">Check out my travel photos!</p>
-                <Slider infinite={true} autoplay={true} speed={1000} autoplaySpeed={2000} slidesToShow={1} slidesToScroll={1}>
+                <Slider infinite={true} autoplay={true} speed={1000} autoplaySpeed={2000} slidesToShow={1} slidesToScroll={1} lazyLoad="ondemand">
                     {Object.entries(images).map(([path, module], index) => (
-                        <img src={module.default} alt={`Image ${index}`} className="aspect-square object-cover rounded-2xl"/>
+                        <img key={path} src={module.default} alt={`Image ${index}`} loading="lazy" className="aspect-square object-cover rounded-2xl"/>
                     ))}
                 </Slider>
             </div>

@@ -159,9 +159,10 @@ export default function About({darkMode}) {
                             title="Research Intern"
                             date="Summer 2026"
                             bullets={[
-                                "Developing a novel text-to-image framework for synthesizing medical imaging data from anatomical descriptions",
-                                "Engineered a 50+ attribute schema encoding shape and material properties for LLM agent control of fine-grained anatomy",
-                                "Training conditional diffusion models across Slurm-scheduled CUDA GPU nodes to synthesize diverse medical images"
+                                "Developed a novel text-to-image framework for synthesizing diverse CT imaging data from anatomical descriptions",
+                                "Engineered a 90+ attribute schema encoding shape and material properties for agentic control of anatomy and CT textures",
+                                "Fine-tuned conditional diffusion models with LoRA adapters and auxiliary losses across 4 H100 GPUs with PyTorch DDP",
+                                "Achieved 0.9 Dice on anatomical structures, verified image realism and prompt adherence with radiology experts"
                             ]}
                             image={siemens}
                             darkMode={darkMode}
@@ -170,9 +171,9 @@ export default function About({darkMode}) {
                             title="Software Engineer Intern"
                             date="Fall 2025"
                             bullets={[
-                                "Expanded an AI-powered system of microservices that seamlessly integrates and analyzes multiple sources of external data",
-                                "Automated model evaluation using document QA datasets and natural language similarity measures to test the validity of chatbot responses",
-                                "Implemented a tagging feature that allows users to categorize their documents and fine-tune the scope of their results"
+                                "Expanded an AI-powered system of 7 microservices that integrate and analyze diverse sources of external data",
+                                "Automated model evaluation across 16,558 QA pairs using BERT similarity scoring to validate chatbot response quality",
+                                "Implemented a tagging feature enabling users to categorize their documents and fine-tune the scope of their query"
                             ]}
                             image={queryhat}
                             darkMode={darkMode}
@@ -187,7 +188,7 @@ export default function About({darkMode}) {
                                         <u>paper</u>
                                     </a> describing our network analysis of countries and their strategic interests using <i>NetworkX</i> and the <i>Louvain Method</i>
                                 </>,
-                                "Optimized cosine similarity and other semantic analyses to clean and merge 4,137 extracted topics"
+                                "Optimized cosine similarity and semantic NLP techniques to clean and merge 4,137 extracted report topics"
                             ]}
                             image={apl}
                             darkMode={darkMode}
