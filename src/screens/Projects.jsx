@@ -4,6 +4,7 @@ import drill from "../assets/images/projects/drill.png"
 import calico from "../assets/images/projects/calico.png"
 import meridian from "../assets/images/projects/meridian.png"
 import mesh from "../assets/images/projects/mesh.png"
+import nota from "../assets/images/projects/nota.png"
 import ProjectCard from "../components/ProjectCard.jsx";
 
 export default function Projects({darkMode}) {
@@ -15,7 +16,7 @@ export default function Projects({darkMode}) {
                         Mesh
                     </a>}
                     subtitle="GitHub for agents"
-                    tech="Socket.io, MCP, Redis, Next, Typescript, Monaco, ElevenLabs, Groq"
+                    tech="Socket.IO, MCP, Redis, ElevenLabs, Groq, Next, TypeScript, Docker"
                     desc={[
                         "Connects AI agents across different sessions and platforms via shared memory to optimize collaborative development",
                         "Agents share context through an MCP server that connects to a Socket.io coordinator; semantic router running Groq detects and resolves conflicts",
@@ -26,11 +27,26 @@ export default function Projects({darkMode}) {
                 />
 
                 <ProjectCard 
+                    title={<a href="https://github.com/pi-person314/nota" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
+                        Nota
+                    </a>}
+                    subtitle="Your voice, on the page"
+                    tech="Whisper API, openWakeWord, MCP, Flask, Google OAuth, SQLite, Vite, Docker"
+                    desc={[
+                        "Trained a custom wake word model using openWakeWord to trigger voice-to-text transcription with OpenAI's Whisper API",
+                        "Built an MCP server exposing 17 notation tools that a Claude agentic loop calls to edit MusicXML scores with music21",
+                        "Implemented Google OAuth 2.0 sign-in and an enumeration-safe password reset flow with single-use hashed tokens delivered over SMTP"
+                    ]}
+                    image={nota}
+                    darkMode={darkMode}
+                />
+
+                <ProjectCard 
                     title={<a href="https://devpost.com/software/meridian-geqs1c" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
                         Meridian
                     </a>}
                     subtitle="Get the plans out of the group chat"
-                    tech="Claude API, Discord API, Next, Typescript, Prisma, Express, MongoDB"
+                    tech="Claude API, Discord API, Prisma, Express, MongoDB, Next, TypeScript"
                     desc={[
                         "Discord bot that listens to your group chat's travel plans and triggers a series of AI agents to build a personalized itinerary",
                         "Negotiator agent considers each user's preferences and proposes compromises, continually monitors for changes and updates itinerary accordingly",
@@ -71,11 +87,11 @@ export default function Projects({darkMode}) {
                 />
 
                 <ProjectCard 
-                    title={<a href="https://drill-share.vercel.app" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
+                    title={<a href="https://github.com/pi-person314/drill-share" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
                         Drill Share
                     </a>}
                     subtitle="Share and discover sports drills"
-                    tech="Next, Typescript, Tailwind, Express, MongoDB"
+                    tech="Next, TypeScript, Tailwind, Express, MongoDB"
                     desc={[
                         "Full-stack website that aims to provide sports players a platform to share and discover new ways to train",
                         "Stored user profile and drill data in MongoDB, extracted and updated with an Express REST API",
