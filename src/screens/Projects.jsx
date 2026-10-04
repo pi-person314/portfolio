@@ -5,6 +5,7 @@ import calico from "../assets/images/projects/calico.png"
 import meridian from "../assets/images/projects/meridian.png"
 import mesh from "../assets/images/projects/mesh.png"
 import nota from "../assets/images/projects/nota.png"
+import quod from "../assets/images/projects/quod.png"
 import ProjectCard from "../components/ProjectCard.jsx";
 
 export default function Projects({darkMode}) {
@@ -42,17 +43,17 @@ export default function Projects({darkMode}) {
                 />
 
                 <ProjectCard 
-                    title={<a href="https://devpost.com/software/meridian-geqs1c" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
-                        Meridian
+                    title={<a href="https://plume.hackmit.org/project/zrokb-hdmqm-terwr-tyqdj" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
+                        Quod
                     </a>}
-                    subtitle="Get the plans out of the group chat"
-                    tech="Claude API, Discord API, Prisma, Express, MongoDB, Next, TypeScript"
+                    subtitle="Know what rests on what"
+                    tech="Elasticsearch, PyMuPDF, Manim, PostgreSQL, Firebase, OpenAI, Next, TypeScript"
                     desc={[
-                        "Discord bot that listens to your group chat's travel plans and triggers a series of AI agents to build a personalized itinerary",
-                        "Negotiator agent considers each user's preferences and proposes compromises, continually monitors for changes and updates itinerary accordingly",
-                        "Booking agent searches for flights and hotels and automatically books them while calendar agent creates calendar events with reminders",
+                        "Built a PDF reader that links definitions and theorems across uploaded math documents, with chat/voice Q&A that aids students only by citing relevant theorems",
+                        "Visualized concepts as an interactive dependency graph, ranking results with PageRank and depicting both citation and restatement relationships",
+                        "Animated the homepage with Manim: rotating sphere, sine-surface wireframe, and a multi-layer proof graph"
                     ]}
-                    image={meridian}
+                    image={quod}
                     darkMode={darkMode}
                 />
                 
@@ -68,6 +69,21 @@ export default function Projects({darkMode}) {
                         "Integrated cheating detection measures and updated certificates with contest filtering and country ranks"
                     ]}
                     image={calico}
+                    darkMode={darkMode}
+                />
+
+                <ProjectCard 
+                    title={<a href="https://devpost.com/software/meridian-geqs1c" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
+                        Meridian
+                    </a>}
+                    subtitle="Get the plans out of the group chat"
+                    tech="Claude API, Discord API, Prisma, Express, MongoDB, Next, TypeScript"
+                    desc={[
+                        "Discord bot that listens to your group chat's travel plans and triggers a series of AI agents to build a personalized itinerary",
+                        "Negotiator agent considers each user's preferences and proposes compromises, continually monitors for changes and updates itinerary accordingly",
+                        "Booking agent searches for flights and hotels and automatically books them while calendar agent creates calendar events with reminders",
+                    ]}
+                    image={meridian}
                     darkMode={darkMode}
                 />
                 
