@@ -6,6 +6,7 @@ import meridian from "../assets/images/projects/meridian.png"
 import mesh from "../assets/images/projects/mesh.png"
 import nota from "../assets/images/projects/nota.png"
 import quod from "../assets/images/projects/quod.png"
+import ct from "../assets/images/projects/ct.png"
 import ProjectCard from "../components/ProjectCard.jsx";
 
 export default function Projects({darkMode}) {
@@ -24,6 +25,21 @@ export default function Projects({darkMode}) {
                         "Live dashboard uses Monaco editors to display each agent's real-time edits and reasoning, with ElevenLabs voice alerts signaling conflicts"
                     ]}
                     image={mesh}
+                    darkMode={darkMode}
+                />
+
+                <ProjectCard 
+                    title={<a href="https://jadenml.dev/poster.pdf" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
+                        Synthetic CT Generation
+                    </a>}
+                    subtitle="Text to CT"
+                    tech="Python, PyTorch, LangGraph, Azure, CUDA, Slurm"
+                    desc={[
+                        "Developed a novel text-to-image framework for synthesizing diverse CT imaging data from anatomical descriptions",
+                        "Engineered a 90+ attribute schema encoding shape and material properties for agentic control of anatomy and CT textures",
+                        "Fine-tuned conditional diffusion models with LoRA adapters and auxiliary losses across 4 H100 GPUs with PyTorch DDP"
+                    ]}
+                    image={ct}
                     darkMode={darkMode}
                 />
 
@@ -73,21 +89,6 @@ export default function Projects({darkMode}) {
                 />
 
                 <ProjectCard 
-                    title={<a href="https://devpost.com/software/meridian-geqs1c" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
-                        Meridian
-                    </a>}
-                    subtitle="Get the plans out of the group chat"
-                    tech="Claude API, Discord API, Prisma, Express, MongoDB, Next, TypeScript"
-                    desc={[
-                        "Discord bot that listens to your group chat's travel plans and triggers a series of AI agents to build a personalized itinerary",
-                        "Negotiator agent considers each user's preferences and proposes compromises, continually monitors for changes and updates itinerary accordingly",
-                        "Booking agent searches for flights and hotels and automatically books them while calendar agent creates calendar events with reminders",
-                    ]}
-                    image={meridian}
-                    darkMode={darkMode}
-                />
-                
-                <ProjectCard 
                     title={<a href="https://arxiv.org/abs/2505.17234" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
                         Country-Topic Grapher
                     </a>}
@@ -99,6 +100,21 @@ export default function Projects({darkMode}) {
                         "Utilized the Louvain method to cluster countries into 10 groups (shown by colors)"
                     ]}
                     image={graph}
+                    darkMode={darkMode}
+                />
+
+                <ProjectCard 
+                    title={<a href="https://devpost.com/software/meridian-geqs1c" target="_blank" className={`underline duration-300 ${darkMode ? "hover:text-blue-300" : "hover:text-blue-600"}`}>
+                        Meridian
+                    </a>}
+                    subtitle="Get the plans out of the group chat"
+                    tech="Claude API, Discord API, Prisma, Express, MongoDB, Next, TypeScript"
+                    desc={[
+                        "Discord bot that listens to your group chat's travel plans and triggers a series of AI agents to build a personalized itinerary",
+                        "Negotiator agent considers each user's preferences and proposes compromises, continually monitors for changes and updates itinerary accordingly",
+                        "Booking agent searches for flights and hotels and automatically books them while calendar agent creates calendar events with reminders",
+                    ]}
+                    image={meridian}
                     darkMode={darkMode}
                 />
 
